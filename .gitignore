@@ -1,33 +1,68 @@
-# OS files
+# ===========================================
+# DATA FILES - EXCLUDED FOR PRIVACY
+# ===========================================
+
+# All interview transcripts and analysis outputs
+Inputs/
+Outputs/
+Outcome/
+
+# Document formats
+*.pdf
+*.txt
+*.docx
+*.xlsx
+*.xls
+*.csv
+
+# YAML data files (contain quotes/personal data)
+*.yaml
+*.yml
+
+# Keep only pipeline YAML templates
+!pipeline/**/*.yaml
+!pipeline/**/*.yml
+
+# ===========================================
+# SYSTEM FILES
+# ===========================================
+
+# OS
 .DS_Store
 .DS_Store?
 ._*
 Thumbs.db
+ehthumbs.db
 
-# R files
+# R
 .Rhistory
 .RData
 .Rproj.user/
 
-# Office files (use markdown instead)
-*.docx
-*.xlsx
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv/
+
+# IDE and AI tools
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# Temporary files
 ~$*
 *.tmp
-
-# Draft outputs (work in progress)
-Outcome/
-
-# Original files with names (if any)
-Original/
-
-# Backup files
+*.temp
 *.bak
 *.backup
 
-# IDE
-.vscode/
-.idea/
-
 # Logs
 *.log
+
+# Original/backup folders
+Original/
+backup/
+old/
