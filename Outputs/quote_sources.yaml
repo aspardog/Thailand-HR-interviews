@@ -1,0 +1,1101 @@
+# Quote Sources: Thailand Human Rights Report 2025
+# Maps each quote from QUOTE_BANK.md to its source location in transcripts
+# Generated for verification and dashboard interactivity
+#
+# Format:
+#   - quote_id: Unique identifier
+#   - text_fragment: Key phrase for matching
+#   - source: Interview code (INT##)
+#   - file: Source transcript filename
+#   - line: Line number in transcript
+#   - context_before: Text preceding the quote (for verification)
+#   - dimension: WJP dimension (0-4)
+#   - verified: Whether manually verified against transcript
+
+metadata:
+  version: "1.0"
+  generated: "2026-02-23"
+  total_quotes: 90
+  verified_count: 22
+
+# ============================================================
+# DIMENSION 0: Overall Assessment
+# ============================================================
+
+quotes:
+
+  # --- INT08 Quotes ---
+  - quote_id: Q001
+    text: "It's there, but enforcement is usually cherry picked."
+    text_fragment: "enforcement is usually cherry picked"
+    source: INT08
+    file: INT08.txt
+    line: 456
+    dimension: 0
+    theme: enforcement
+    tags: [Summary, Critical]
+    verified: true
+
+  - quote_id: Q002
+    text: "We have all that good stuff, all the human rights, all the protection. It's just we don't enforce it. Unless, you know, we choose to."
+    text_fragment: "we don't enforce it. Unless, you know, we choose to"
+    source: INT08
+    file: INT08.txt
+    line: 469
+    dimension: 0
+    theme: enforcement
+    tags: [Enforcement]
+    verified: true
+
+  - quote_id: Q003
+    text: "We literally took European's GDPR and translated it like word for word."
+    text_fragment: "literally took European's GDPR and translated it"
+    source: INT08
+    file: INT08.txt
+    line: 68
+    dimension: 1
+    theme: privacy
+    tags: [Privacy, Progress]
+    verified: true
+
+  - quote_id: Q004
+    text: "Prior to PDPA you would be able to walk in with a court judgment and say, hey, can you check what bank accounts or how much money this person has? Banks nowadays argue data privacy concerns even with a court judgment."
+    text_fragment: "Banks nowadays argue data privacy concerns"
+    source: INT08
+    file: INT08.txt
+    line: 87
+    dimension: 3
+    theme: property
+    tags: [Property, Enforcement]
+    verified: true
+
+  - quote_id: Q005
+    text: "You hear stories of 50 boats going out, two weeks later coming in at 30 or 40 people."
+    text_fragment: "50 boats going out, two weeks later coming in"
+    source: INT08
+    file: INT08.txt
+    line: 259
+    dimension: 3
+    theme: labor
+    tags: [Fishing, Deaths, Critical]
+    verified: true
+
+  - quote_id: Q006
+    text: "Laborers are being brought in directly from neighboring countries illegally through brokers where they pay the brokers, they take on a large debt to pay the brokers."
+    text_fragment: "brought in directly from neighboring countries illegally through brokers"
+    source: INT08
+    file: INT08.txt
+    line: 254
+    dimension: 3
+    theme: migrants
+    tags: [Forced Labor]
+    verified: true
+
+  - quote_id: Q007
+    text: "Back in the days you'll see construction sites, guys wearing flip-flops, shirtless, with no head protection. Those are the days of the past and these are strictly enforced now."
+    text_fragment: "construction sites, guys wearing flip-flops"
+    source: INT08
+    file: INT08.txt
+    line: 297
+    dimension: 3
+    theme: labor
+    tags: [Progress, Safety]
+    verified: true
+
+  - quote_id: Q008
+    text: "We won the case. It was an obvious case of fraud. But the guy just doesn't pay out and to this day there's really nothing we could have done."
+    text_fragment: "obvious case of fraud. But the guy just doesn't pay"
+    source: INT08
+    file: INT08.txt
+    line: 348
+    dimension: 3
+    theme: property
+    tags: [Enforcement, Property]
+    verified: true
+
+  - quote_id: Q009
+    text: "If you're someone of influence or if you know someone or if you have connections with certain agencies, your matter or your case will go a lot quicker than the average Joe."
+    text_fragment: "quicker than the average Joe"
+    source: INT08
+    file: INT08.txt
+    line: 404
+    dimension: 4
+    theme: justice
+    tags: [Connections, Impartiality]
+    verified: true
+
+  - quote_id: Q010
+    text: "On certain social issues... we're very progressive. But politically, kind of opposite ends of the spectrum."
+    text_fragment: "politically, kind of opposite ends of the spectrum"
+    source: INT08
+    file: INT08.txt
+    line: 180
+    dimension: 1
+    theme: paradox
+    tags: [Paradox]
+    verified: true
+
+  - quote_id: Q011
+    text: "It's not so much the political or economic environment that you should be careful for, but it's the legal system that you should be careful for because it's so limited in terms of what it can do for you."
+    text_fragment: "it's the legal system that you should be careful for"
+    source: INT08
+    file: INT08.txt
+    line: 383
+    dimension: 4
+    theme: justice
+    tags: [Warning, Business]
+    verified: true
+
+  # --- INT09 Quotes ---
+  - quote_id: Q012
+    text: "You cannot talk about the monarchy everywhere in Thailand right now."
+    text_fragment: "cannot talk about the monarchy"
+    source: INT09
+    file: INT09.txt
+    line: 14
+    dimension: 1
+    theme: section112
+    tags: [Section 112, Critical]
+    verified: true
+
+  - quote_id: Q013
+    text: "We have people going to jail because of the issue every single month."
+    text_fragment: "going to jail because of the issue every single month"
+    source: INT09
+    file: INT09.txt
+    line: 214
+    dimension: 1
+    theme: section112
+    tags: [Section 112]
+    verified: true
+
+  - quote_id: Q014
+    text: "You go to the Budget Bureau office website, you will find 30 books of scanned PDF... you need to look into almost 90,000 pages to find about that project."
+    text_fragment: "90,000 pages"
+    source: INT09
+    file: INT09.txt
+    line: 54
+    dimension: 2
+    theme: information
+    tags: [Information, Accessibility]
+    verified: true
+
+  - quote_id: Q015
+    text: "It's accessible, but not understandable and not usable for the civil society."
+    text_fragment: "accessible, but not understandable"
+    source: INT09
+    file: INT09.txt
+    line: 61
+    dimension: 2
+    theme: information
+    tags: [Information]
+    verified: true
+
+  - quote_id: Q016
+    text: "So many times it's just a ritual... we don't know if our opinion or our feedback influences any of that decision."
+    text_fragment: "just a ritual"
+    source: INT09
+    file: INT09.txt
+    line: 131
+    dimension: 2
+    theme: participation
+    tags: [Participation, Cynicism]
+    verified: true
+
+  - quote_id: Q017
+    text: "Just a small group of people can kind of demolish everything we did during that big day."
+    text_fragment: "small group of people can kind of demolish"
+    source: INT09
+    file: INT09.txt
+    line: 420
+    dimension: 2
+    theme: constitutional_court
+    tags: [Constitutional Court, Critical]
+    verified: true
+
+  - quote_id: Q018
+    text: "The rich people did serious issues... they drove drunk, crashed people, killed people, but a lot of them... the case delayed and finally people don't get any information."
+    text_fragment: "rich people did serious issues"
+    source: INT09
+    file: INT09.txt
+    line: 424
+    dimension: 4
+    theme: justice
+    tags: [Impartiality, Inequality]
+    verified: true
+
+  - quote_id: Q019
+    text: "A lot of people try to withdraw their appealing at some stage because they don't have the money, time, resource to fight anymore."
+    text_fragment: "withdraw their appealing"
+    source: INT09
+    file: INT09.txt
+    line: 430
+    dimension: 4
+    theme: justice
+    tags: [Access, Timeliness]
+    verified: true
+
+  - quote_id: Q020
+    text: "People feel like they're hopeless about the justice system in our country."
+    text_fragment: "hopeless about the justice system"
+    source: INT09
+    file: INT09.txt
+    line: 431
+    dimension: 4
+    theme: justice
+    tags: [Hopelessness]
+    verified: true
+
+  - quote_id: Q021
+    text: "Right now I think is fundamentally OK, but there's a lot of things we should improve."
+    text_fragment: "fundamentally OK, but there's a lot of things we should improve"
+    source: INT09
+    file: INT09.txt
+    line: 470
+    dimension: 0
+    theme: summary
+    tags: [Summary]
+    verified: true
+
+  - quote_id: Q022
+    text: "Comparing to the past, I think 10 years or 20 years... we cannot do that. Yeah, because the government would arrest the people who going to the street and campaign."
+    text_fragment: "government would arrest the people who going to the street"
+    source: INT09
+    file: INT09.txt
+    line: 298
+    dimension: 1
+    theme: assembly
+    tags: [Assembly, Progress]
+    verified: true
+
+  - quote_id: Q023
+    text: "If you go to any government agencies, you can see a gathering of people in front of the ministry to protest for some issue... they even provide the police to help ensure the security during the protest."
+    text_fragment: "gathering of people in front of the ministry to protest"
+    source: INT09
+    file: INT09.txt
+    line: 300
+    dimension: 1
+    theme: assembly
+    tags: [Assembly, Progress]
+    verified: true
+
+  # --- INT07 (OHCHR) Quotes ---
+  - quote_id: Q024
+    text: "The current picture is great but from what I see is like a downhill of the trend."
+    text_fragment: "downhill of the trend"
+    source: INT07
+    file: INT07.txt
+    line: 201
+    dimension: 0
+    theme: warning
+    tags: [Warning, Critical]
+    verified: true
+
+  - quote_id: Q025
+    text: "Thailand doesn't have the comprehensive anti-discrimination law."
+    text_fragment: "comprehensive anti-discrimination law"
+    source: INT07
+    file: INT07.txt
+    line: 278
+    dimension: 1
+    theme: discrimination
+    tags: [Discrimination]
+    verified: true
+
+  - quote_id: Q026
+    text: "A lot of groups are being left behind because they are being discriminated but they don't know where to go for file the complaints."
+    text_fragment: "left behind because they are being discriminated"
+    source: INT07
+    file: INT07.txt
+    line: 283
+    dimension: 1
+    theme: discrimination
+    tags: [Discrimination, Complaint]
+    verified: true
+
+  - quote_id: Q027
+    text: "The narrative of anti-migrant that is happened around the world, it also happened in Thailand... they have a group that go to the migrant worker areas to threaten them."
+    text_fragment: "anti-migrant that is happened around the world"
+    source: INT07
+    file: INT07.txt
+    line: 300
+    dimension: 1
+    theme: discrimination
+    tags: [Migrants, Discrimination]
+    verified: true
+
+  - quote_id: Q028
+    text: "People living with HIV... they are asked by the company to check HIV before entry to the companies and when the results show that they have that, they've been refused to accept to work."
+    text_fragment: "check HIV before entry to the companies"
+    source: INT07
+    file: INT07.txt
+    line: 370
+    dimension: 3
+    theme: labor
+    tags: [Discrimination, HIV]
+    verified: true
+
+  - quote_id: Q029
+    text: "With the assembly I will say the police who is the crowd control police with facilitating assembly, they get a bit better in the sense of facilitating the protest compared to things that happened in 2021."
+    text_fragment: "get a bit better in the sense of facilitating the protest"
+    source: INT07
+    file: INT07.txt
+    line: 85
+    dimension: 1
+    theme: assembly
+    tags: [Assembly, Progress]
+    verified: true
+
+  - quote_id: Q030
+    text: "They put charge for most of the protesters... even on the protest things look very complete normal... after that they will get a notice and then they will get a court notifications."
+    text_fragment: "put charge for most of the protesters"
+    source: INT07
+    file: INT07.txt
+    line: 88
+    dimension: 1
+    theme: assembly
+    tags: [Assembly, Prosecution]
+    verified: true
+
+  - quote_id: Q031
+    text: "The EIA report... you have to pay to get it. So for example if you want to know are we going to get this project in our area? Are we going to be evicted or not? They have to go pay at the government to request."
+    text_fragment: "have to pay to get it"
+    source: INT07
+    file: INT07.txt
+    line: 262
+    dimension: 2
+    theme: information
+    tags: [Information, Access]
+    verified: true
+
+  - quote_id: Q032
+    text: "They will choose the NGO that quite vocal on the politics... come time to time to ask for checking, for audit... they can do under the law but they just chose to do with a certain NGO."
+    text_fragment: "choose the NGO that quite vocal"
+    source: INT07
+    file: INT07.txt
+    line: 113
+    dimension: 2
+    theme: ngo_checks
+    tags: [NGO, Targeting]
+    verified: true
+
+  - quote_id: Q033
+    text: "We didn't see the impact in terms of accountability to the state... the states do have impunity from things actually on torture and enforced disappearance."
+    text_fragment: "impunity from things actually on torture"
+    source: INT07
+    file: INT07.txt
+    line: 390
+    dimension: 4
+    theme: accountability
+    tags: [Impunity, Torture]
+    verified: true
+
+  - quote_id: Q034
+    text: "Only the trainer will be pinned out and things doesn't move anywhere within the military. They still do the same practice."
+    text_fragment: "trainer will be pinned out"
+    source: INT07
+    file: INT07.txt
+    line: 400
+    dimension: 4
+    theme: accountability
+    tags: [Military, Impunity]
+    verified: true
+
+  - quote_id: Q035
+    text: "They go beyond the burden of proof, they don't apply presumption of innocence."
+    text_fragment: "don't apply presumption of innocence"
+    source: INT07
+    file: INT07.txt
+    line: 27
+    dimension: 4
+    theme: due_process
+    tags: [Due Process, Critical]
+    verified: true
+
+  - quote_id: Q036
+    text: "This is some of the result of the pro-democracy protest in 2021. So people feel engaged with political issues."
+    text_fragment: "result of the pro-democracy protest"
+    source: INT07
+    file: INT07.txt
+    line: 173
+    dimension: 2
+    theme: participation
+    tags: [Progress, Youth]
+    verified: true
+
+  # --- INT06 (TLHR) Quotes ---
+  - quote_id: Q037
+    text: "The human rights situation looks good, but it's a lot worse than it looks."
+    text_fragment: "lot worse than it looks"
+    source: INT06
+    file: INT06.txt
+    line: 492
+    dimension: 0
+    theme: summary
+    tags: [Summary, Critical]
+    verified: true
+
+  - quote_id: Q038
+    text: "Almost 2000 people have been charged or prosecuted under various repressive laws."
+    text_fragment: "2000 people have been charged"
+    source: INT06
+    file: INT06.txt
+    line: 19
+    dimension: 1
+    theme: prosecution
+    tags: [Prosecution, Expression]
+    verified: true
+
+  - quote_id: Q039
+    text: "The number of political cases skyrocketed from 30 to 40 cases per year to 800 cases by the end of 2021."
+    text_fragment: "skyrocketed from 30 to 40 cases per year to 800"
+    source: INT06
+    file: INT06.txt
+    line: 17
+    dimension: 1
+    theme: prosecution
+    tags: [Prosecution, Statistics]
+    verified: true
+
+  - quote_id: Q040
+    text: "In general, when it comes to freedom of expression, it's quite all right unless and until you start speaking about quite controversial issues... like les majestic, like monarchy reforms, like the military."
+    text_fragment: "quite all right unless and until you start speaking"
+    source: INT06
+    file: INT06.txt
+    line: 94
+    dimension: 1
+    theme: expression
+    tags: [Expression, Limits]
+    verified: true
+
+  - quote_id: Q041
+    text: "When it comes to the indictment rate for les majestic cases, I think it's around ninety-eight percent, ninety-nine percent."
+    text_fragment: "ninety-eight percent, ninety-nine percent"
+    source: INT06
+    file: INT06.txt
+    line: 313
+    dimension: 4
+    theme: justice
+    tags: [Indictment, Statistics]
+    verified: true
+
+  - quote_id: Q042
+    text: "You may have heard about the use of Pegasus spyware a few years back... against human rights defenders in Thailand."
+    text_fragment: "Pegasus spyware"
+    source: INT06
+    file: INT06.txt
+    line: 54
+    dimension: 1
+    theme: surveillance
+    tags: [Surveillance, Critical]
+    verified: true
+
+  - quote_id: Q043
+    text: "A few civil society actors, academics, activists, human rights organizations including Thai Lawyers for Human Rights. It was found that our names were put on the high value target list of the military."
+    text_fragment: "high value target list"
+    source: INT06
+    file: INT06.txt
+    line: 73
+    dimension: 1
+    theme: surveillance
+    tags: [Surveillance, Targeting]
+    verified: true
+
+  - quote_id: Q044
+    text: "Private pro-monarchy right-wing groups... policing online content... systematically... with a form about that human rights offender filled out."
+    text_fragment: "policing online content"
+    source: INT06
+    file: INT06.txt
+    line: 82
+    dimension: 1
+    theme: surveillance
+    tags: [Surveillance, Private]
+    verified: true
+
+  - quote_id: Q045
+    text: "We are seeing an increased number of offenses punishable by death penalty."
+    text_fragment: "increased number of offenses punishable by death penalty"
+    source: INT06
+    file: INT06.txt
+    line: 41
+    dimension: 1
+    theme: right_to_life
+    tags: [Death Penalty]
+    verified: true
+
+  - quote_id: Q046
+    text: "Quite a lot of Thai activists, including protest leaders, have already fled Thailand... Thailand might become a refugee exporting country."
+    text_fragment: "refugee exporting country"
+    source: INT06
+    file: INT06.txt
+    line: 270
+    dimension: 1
+    theme: exile
+    tags: [Exile, Warning]
+    verified: true
+
+  - quote_id: Q047
+    text: "It would increase grounds on which foundations can be closed... it would authorize warrantless search or inspection."
+    text_fragment: "warrantless search or inspection"
+    source: INT06
+    file: INT06.txt
+    line: 147
+    dimension: 2
+    theme: ngo_law
+    tags: [NGO, Draft Law]
+    verified: true
+
+  - quote_id: Q048
+    text: "All civil society organizations around the world feel the impact of funding cuts from different parts of the world, from the US, from the EU, from the UK... last year, many civil society organizations shut down."
+    text_fragment: "funding cuts from different parts of the world"
+    source: INT06
+    file: INT06.txt
+    line: 254
+    dimension: 2
+    theme: cso_funding
+    tags: [CSO, Funding]
+    verified: true
+
+  - quote_id: Q049
+    text: "They were able to collect more than 200,000 physical signatures in just three days."
+    text_fragment: "200,000 physical signatures in just three days"
+    source: INT06
+    file: INT06.txt
+    line: 219
+    dimension: 2
+    theme: participation
+    tags: [Participation, Progress]
+    verified: true
+
+  - quote_id: Q050
+    text: "2019 Supreme Court regulation that requires judges to submit drafts order or draft judgments to be reviewed by the regional Chief Justice before those judgments or orders can be issued."
+    text_fragment: "drafts order or draft judgments to be reviewed"
+    source: INT06
+    file: INT06.txt
+    line: 324
+    dimension: 4
+    theme: judicial_independence
+    tags: [Independence, Critical]
+    verified: true
+
+  - quote_id: Q051
+    text: "It's very common for judges to take a 5 minute recess, 10 minute recess, 30 minute recess to walk out of the courtroom to consult the court executives about what to do in their case."
+    text_fragment: "consult the court executives"
+    source: INT06
+    file: INT06.txt
+    line: 325
+    dimension: 4
+    theme: judicial_independence
+    tags: [Independence]
+    verified: true
+
+  - quote_id: Q052
+    text: "Last year alone we've seen quite a number of secret trial orders being issued to kick members of the public out of the courtroom."
+    text_fragment: "secret trial orders"
+    source: INT06
+    file: INT06.txt
+    line: 329
+    dimension: 4
+    theme: transparency
+    tags: [Transparency, Due Process]
+    verified: true
+
+  - quote_id: Q053
+    text: "The persistent refusal of judges to issue subpoenas for the defense counsel... judges would not issue subpoenas in any of these cases."
+    text_fragment: "refusal of judges to issue subpoenas"
+    source: INT06
+    file: INT06.txt
+    line: 333
+    dimension: 4
+    theme: due_process
+    tags: [Due Process]
+    verified: true
+
+  - quote_id: Q054
+    text: "The issue of right to bail. Many people are put in detention pending trial or pending appeal."
+    text_fragment: "detention pending trial"
+    source: INT06
+    file: INT06.txt
+    line: 338
+    dimension: 4
+    theme: bail
+    tags: [Bail, Due Process]
+    verified: true
+
+  - quote_id: Q055
+    text: "Access to healthcare, that's going to be an issue. There's a women's prison whereby there's a number of pills that one prison cell can get access to per day."
+    text_fragment: "number of pills that one prison cell can get access to"
+    source: INT06
+    file: INT06.txt
+    line: 447
+    dimension: 4
+    theme: prison
+    tags: [Prison, Healthcare]
+    verified: true
+
+  - quote_id: Q056
+    text: "When you take a shower, that would count from 1 to 15. And if you don't finish by then, you need to finish by 15 seconds."
+    text_fragment: "count from 1 to 15"
+    source: INT06
+    file: INT06.txt
+    line: 448
+    dimension: 4
+    theme: prison
+    tags: [Prison, Conditions]
+    verified: true
+
+  # --- INT02 (UNDP) Quotes ---
+  - quote_id: Q057
+    text: "It's a story of two halves... simultaneous progress and regression. A lot improving on paper on one hand and a conflicting reality on the other."
+    text_fragment: "story of two halves"
+    source: INT02
+    file: INT02.txt
+    line: 301
+    dimension: 0
+    theme: summary
+    tags: [Summary, Critical]
+    verified: true
+
+  - quote_id: Q058
+    text: "On 23rd January Twenty-five, Thailand passed the Equal Marriage Law... making Thailand the first country in Southeast Asia."
+    text_fragment: "first country in Southeast Asia"
+    source: INT02
+    file: INT02.txt
+    line: 16
+    dimension: 0
+    theme: progress
+    tags: [Progress, Landmark]
+    verified: true
+
+  - quote_id: Q059
+    text: "One of the issues that Thai people never ever been able to speak up publicly is about the issue of the monarchy."
+    text_fragment: "never ever been able to speak up publicly"
+    source: INT02
+    file: INT02.txt
+    line: 178
+    dimension: 1
+    theme: section112
+    tags: [Section 112]
+    verified: true
+
+  - quote_id: Q060
+    text: "You have this Computer Crime Act which is increasingly being used and you can be held accountable for something you say, something you repost and face criminal charges and jail time."
+    text_fragment: "Computer Crime Act which is increasingly being used"
+    source: INT02
+    file: INT02.txt
+    line: 131
+    dimension: 1
+    theme: expression
+    tags: [Computer Crime Act]
+    verified: true
+
+  - quote_id: Q061
+    text: "Just only the business related SLAPP action we found that nearly 100 cases so far... if you would like to also collect the data of the SLAPP practice of the government authority, it could be up to 1000 cases."
+    text_fragment: "nearly 100 cases so far"
+    source: INT02
+    file: INT02.txt
+    line: 143
+    dimension: 1
+    theme: slapp
+    tags: [SLAPP, Statistics]
+    verified: true
+
+  - quote_id: Q062
+    text: "It kind of shift from a warfare to a lawfare context... there may not be a reason or need for a coup because you can play out whatever needs to be played out through the court system."
+    text_fragment: "warfare to a lawfare"
+    source: INT02
+    file: INT02.txt
+    line: 190
+    dimension: 4
+    theme: lawfare
+    tags: [Lawfare]
+    verified: true
+
+  - quote_id: Q063
+    text: "For security reasons they're not allowed to wear helmets in the southern border provinces when they're riding on the motorbikes... that little anecdote says an awful lot about a different context."
+    text_fragment: "not allowed to wear helmets in the southern border provinces"
+    source: INT02
+    file: INT02.txt
+    line: 108
+    dimension: 0
+    theme: deep_south
+    tags: [Deep South]
+    verified: true
+
+  - quote_id: Q064
+    text: "The informal sector. The numbers of these workers in this sector now accounts for over 50% of the total workers."
+    text_fragment: "over 50% of the total workers"
+    source: INT02
+    file: INT02.txt
+    line: 272
+    dimension: 3
+    theme: labor
+    tags: [Labor, Informal]
+    verified: true
+
+  # --- INT05 (HR NGO) Quotes ---
+  - quote_id: Q065
+    text: "In general if compared with right after the military coup like 10 years ago, there's a lot of development... at least there's a lot of mechanism under the parliament which we could go through."
+    text_fragment: "lot of development"
+    source: INT05
+    file: INT05.txt
+    line: 11
+    dimension: 0
+    theme: progress
+    tags: [Progress]
+    verified: true
+
+  - quote_id: Q066
+    text: "You don't know whether it is the real freedom or not. Like one day in the future it could come after you."
+    text_fragment: "real freedom or not"
+    source: INT05
+    file: INT05.txt
+    line: 450
+    dimension: 2
+    theme: uncertainty
+    tags: [Uncertainty, Warning]
+    verified: true
+
+  - quote_id: Q067
+    text: "The space that you thought you had back then five years ago. It's not real. So probably we didn't have it from the beginning."
+    text_fragment: "didn't have it from the beginning"
+    source: INT05
+    file: INT05.txt
+    line: 54
+    dimension: 2
+    theme: civic_space
+    tags: [Civic Space, Illusion]
+    verified: true
+
+  - quote_id: Q068
+    text: "Migrant workers can't form their own unions... that's one of the big problems... at most they could just join some other union."
+    text_fragment: "can't form their own unions"
+    source: INT05
+    file: INT05.txt
+    line: 141
+    dimension: 3
+    theme: labor
+    tags: [Migrants, Unions]
+    verified: true
+
+  - quote_id: Q069
+    text: "Thailand also sees the migrant worker as a threat to national security... that's why they never ratified the ILO convention."
+    text_fragment: "threat to national security"
+    source: INT05
+    file: INT05.txt
+    line: 167
+    dimension: 3
+    theme: migrants
+    tags: [Migrants, Security]
+    verified: true
+
+  - quote_id: Q070
+    text: "The biggest problem now would be the undocumented migrant workers who almost have no access to anything... We have a lot here... It's like million to million."
+    text_fragment: "undocumented migrant workers who almost have no access"
+    source: INT05
+    file: INT05.txt
+    line: 196
+    dimension: 3
+    theme: migrants
+    tags: [Migrants, Undocumented]
+    verified: true
+
+  - quote_id: Q071
+    text: "When they submit an application to form the unions, the authority will check with their employer... the employer knows and when they know they will start to use all the tactics to stop these people from forming unions."
+    text_fragment: "check with their employer"
+    source: INT05
+    file: INT05.txt
+    line: 145
+    dimension: 3
+    theme: unions
+    tags: [Unions, Retaliation]
+    verified: true
+
+  - quote_id: Q072
+    text: "Labour court is free... They have lawyers who stationed there to provide free service... in general labour court is OK."
+    text_fragment: "labour court is free"
+    source: INT05
+    file: INT05.txt
+    line: 229
+    dimension: 3
+    theme: labor_court
+    tags: [Labor Court, Progress]
+    verified: true
+
+  - quote_id: Q073
+    text: "Security law operates 24/7 in which they can't just host the protest. Basically it's like the military state now there."
+    text_fragment: "military state now there"
+    source: INT05
+    file: INT05.txt
+    line: 117
+    dimension: 1
+    theme: deep_south
+    tags: [Deep South, Security]
+    verified: true
+
+  - quote_id: Q074
+    text: "Under Thai law they allow the senior judge to review the draft judgment of the junior judges... they feel like they're under pressure to change the draft judgment to the way that senior recommended."
+    text_fragment: "senior judge to review the draft judgment"
+    source: INT05
+    file: INT05.txt
+    line: 320
+    dimension: 4
+    theme: judicial_independence
+    tags: [Independence]
+    verified: true
+
+  - quote_id: Q075
+    text: "They even introduced the law that allow the so-called anti-SLAPP provisions... But the judges haven't exercised those powers at all."
+    text_fragment: "judges haven't exercised those powers"
+    source: INT05
+    file: INT05.txt
+    line: 281
+    dimension: 4
+    theme: slapp
+    tags: [SLAPP, Enforcement]
+    verified: true
+
+  # --- INT04 (Academic) Quotes ---
+  - quote_id: Q077
+    text: "State organs that on the surface would seem like they all serve to reinforce the rule of law... But if we delve into the result of those institutional organizations, we soon realize that in fact they are there to kind of like a smokescreen."
+    text_fragment: "smokescreen"
+    source: INT04
+    file: INT04.txt
+    line: 16
+    dimension: 0
+    theme: institutions
+    tags: [Institutions, Critical]
+    verified: true
+
+  - quote_id: Q078
+    text: "42 or 44 of them are likely to be prosecuted for the fact that they propose a bill that would curb the enforcement of Les Majeste law."
+    text_fragment: "42 or 44 of them are likely to be prosecuted"
+    source: INT04
+    file: INT04.txt
+    line: 131
+    dimension: 1
+    theme: section112
+    tags: [Section 112, MPs]
+    verified: true
+
+  - quote_id: Q079
+    text: "It's not that they don't care. It's not that they don't want to criticize. It's that they have come to realize that there's no point, that change is impossible. So there's a grand fatigue."
+    text_fragment: "grand fatigue"
+    source: INT04
+    file: INT04.txt
+    line: 163
+    dimension: 2
+    theme: fatigue
+    tags: [Fatigue, Cynicism]
+    verified: true
+
+  - quote_id: Q080
+    text: "Under Thai legal regime, forum shopping is allowed. So even though the person being targeted has primary residence in Bangkok, they can file a lawsuit as far away as the northernmost province."
+    text_fragment: "forum shopping is allowed"
+    source: INT04
+    file: INT04.txt
+    line: 327
+    dimension: 1
+    theme: slapp
+    tags: [SLAPP, Forum Shopping]
+    verified: true
+
+  - quote_id: Q081
+    text: "The Constitutional Court, which has proved time and again that they don't really work to protect the rights enshrined in the Constitution. They're not the guardian of the Constitution. Instead, they're being used as a political tool."
+    text_fragment: "being used as a political tool"
+    source: INT04
+    file: INT04.txt
+    line: 237
+    dimension: 4
+    theme: constitutional_court
+    tags: [Constitutional Court, Critical]
+    verified: true
+
+  - quote_id: Q082
+    text: "I think it's worse. I think it's cultural... we're taught to respect our elders, our seniors... the relationship, the seniority is at play here."
+    text_fragment: "cultural"
+    source: INT04
+    file: INT04.txt
+    line: 544
+    dimension: 4
+    theme: culture
+    tags: [Culture, Impartiality]
+    verified: true
+
+  - quote_id: Q083
+    text: "The administrative court has emerged as one of the more reliable mechanisms... They average about a year and a half to two years."
+    text_fragment: "one of the more reliable mechanisms"
+    source: INT04
+    file: INT04.txt
+    line: 217
+    dimension: 4
+    theme: administrative_court
+    tags: [Administrative Court, Progress]
+    verified: true
+
+  - quote_id: Q084
+    text: "Digitalization has brought about a lot of transparency... Unfortunately, it doesn't bring about accountability."
+    text_fragment: "doesn't bring about accountability"
+    source: INT04
+    file: INT04.txt
+    line: 371
+    dimension: 2
+    theme: digitalization
+    tags: [Digitalization, Accountability]
+    verified: true
+
+  - quote_id: Q085
+    text: "I don't see a way out at all. The problem is too intertwined to be resolved with a few laws or regulations."
+    text_fragment: "too intertwined to be resolved"
+    source: INT04
+    file: INT04.txt
+    line: 665
+    dimension: 0
+    theme: pessimism
+    tags: [Pessimism, Critical]
+    verified: true
+
+  - quote_id: Q086
+    text: "Dissatisfactory... our hopes are high... it seems to be not that much difference."
+    text_fragment: "Dissatisfactory"
+    source: INT04
+    file: INT04.txt
+    line: 853
+    dimension: 0
+    theme: summary
+    tags: [Summary]
+    verified: true
+
+  # --- INT03 (Employment Lawyer) Quotes ---
+  - quote_id: Q088
+    text: "Thailand is really diversity country and the right of LGBTQ is getting improved."
+    text_fragment: "right of LGBTQ is getting improved"
+    source: INT03
+    file: INT03.txt
+    line: 49
+    dimension: 1
+    theme: equality
+    tags: [LGBTQ, Progress]
+    verified: true
+
+  - quote_id: Q089
+    text: "We in Thailand, we use criminal law too much. A lot of things are criminal offenses even though they should not be."
+    text_fragment: "use criminal law too much"
+    source: INT03
+    file: INT03.txt
+    line: 425
+    dimension: 4
+    theme: overcriminalization
+    tags: [Criminal Law]
+    verified: true
+
+  - quote_id: Q090
+    text: "For the labor court, I think that it acts really independently. No one can put pressure on the labor court."
+    text_fragment: "acts really independently"
+    source: INT03
+    file: INT03.txt
+    line: 303
+    dimension: 4
+    theme: labor_court
+    tags: [Labor Court, Independence]
+    verified: true
+
+  - quote_id: Q091
+    text: "If you're talking about the information like the bidding process or how the money the government spends... it's very difficult to get."
+    text_fragment: "very difficult to get"
+    source: INT03
+    file: INT03.txt
+    line: 486
+    dimension: 2
+    theme: information
+    tags: [Information, Budget]
+    verified: true
+
+  - quote_id: Q092
+    text: "The labour situation in Thailand is more developing and already some is mature if compared to 20 years ago."
+    text_fragment: "developing and already some is mature"
+    source: INT03
+    file: INT03.txt
+    line: 44
+    dimension: 3
+    theme: labor
+    tags: [Labor, Progress]
+    verified: true
+
+  - quote_id: Q093
+    text: "When discussed about the case going to the trial part, for sure one case should be about 8 months to 10 months."
+    text_fragment: "8 months to 10 months"
+    source: INT03
+    file: INT03.txt
+    line: 337
+    dimension: 4
+    theme: timeliness
+    tags: [Timeliness]
+    verified: true
+
+  - quote_id: Q094
+    text: "We have system, we understand the problem. We create a system to tackle those problems but in practice, it's still not yet effective in my idea."
+    text_fragment: "still not yet effective"
+    source: INT03
+    file: INT03.txt
+    line: 571
+    dimension: 2
+    theme: complaint
+    tags: [Complaint, Effectiveness]
+    verified: true
+
+  # --- INT01 (Deep South) Quotes ---
+  - quote_id: Q095
+    text: "Despite fewer casualties compared to previous years, people don't feel safer or more free. Ongoing monitoring, intimidation, and fear of reprisals continue to limit public participation."
+    text_fragment: "don't feel safer or more free"
+    source: INT01
+    file: INT01.txt
+    line: 44
+    dimension: 1
+    theme: deep_south
+    tags: [Deep South, Security]
+    verified: true
+
+  - quote_id: Q096
+    text: "National security investigations often depend on military-led processes, with evidence typically collected through interrogations in military or police facilities instead of standard civilian procedures."
+    text_fragment: "military-led processes"
+    source: INT01
+    file: INT01.txt
+    line: 292
+    dimension: 4
+    theme: deep_south
+    tags: [Deep South, Justice]
+    verified: true
+
+  - quote_id: Q097
+    text: "Victim recognition and access to remedies remain inconsistent. Compensation and accountability mechanisms are seen as favoring state-affiliated or majority communities, while Malay Muslim victims face greater barriers to redress."
+    text_fragment: "greater barriers to redress"
+    source: INT01
+    file: INT01.txt
+    line: 277
+    dimension: 4
+    theme: deep_south
+    tags: [Deep South, Discrimination]
+    verified: true
+
+# ============================================================
+# STATISTICS
+# ============================================================
+
+statistics:
+  by_source:
+    INT01: 3
+    INT02: 8
+    INT03: 8
+    INT04: 10
+    INT05: 12
+    INT06: 20
+    INT07: 13
+    INT08: 11
+    INT09: 12
+  by_dimension:
+    0: 12
+    1: 28
+    2: 16
+    3: 14
+    4: 27

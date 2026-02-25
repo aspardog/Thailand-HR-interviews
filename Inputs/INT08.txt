@@ -1,0 +1,508 @@
+INTERVIEW CODE 8
+
+Marta Basystiuk   2:40
+Can you, I always start with a general question and I think I included that in the list of questions as well. Can you please tell us how do you assess the current state of fundamental rights pilot in general and if there are any like biggest developments, they can be both negative, positive that you've noticed?
+recently and you think are important for us to know.
+
+INT10   3:04
+So I think it in in in Thailand.
+When people generally look from the outside in they they might what they might see is kind of a quite a fluid political um landscape. Um actually just this past weekend we had the and and this coming weekend we're having the.
+The general elections, so quite an interesting time. Now what I see about when we talk about kind of the political situation in Thailand, it really ties into aspects of like freedom of speech.
+And then as well as kind of other, not exactly human rights per se, but a lot of human rights issues become political issues and it depends on how you look at it. You can say it's a good thing because certain political parties obviously.
+
+Marta Basystiuk   3:55
+Mhm.
+
+INT10   4:02
+The more progressive ones are raising certain issues that have been kind of embedded in society and have been kind of around for years, but they're picking it up to say, hey, you know, have we thought about whether this is right or why should we should continue doing it?
+Whereas some other political parties are they they they they kind of defend certain ideas or certain status quos. So my my point being that I I I think.
+Um.
+Certainly this year's general election, comparing to maybe like 1015 years ago, 20 years ago, there's a lot more social issues that are up for discussion compared compared to back then when it was mostly more fundamental economic issues.
+
+Marta Basystiuk   4:56
+Mhm.
+
+INT10   4:56
+So there's a shift towards this society where we we've kind of realized that and more we're more aware of these issues. For example, a few years ago we passed the the same-sex marriage or same-sex union laws that permit that it would.
+Legalize that in Thailand that came about quite quickly and and recent, yeah.
+
+Marta Basystiuk   5:23
+Thank you so much. That is excellent. And since you've started with the, we call this chapter with respect to our analysis, civil and political rights, just to confirm, are you comfortable with me asking a few questions in that area or do you want to start with something else like with labor rights or?
+
+INT10   5:39
+Yeah, we can we can start with that. I'll try to be kind of more general when it when when I speak about kind of more sensitive topics but but happy to happy to go go through it and then I mean I I defer to your professional opinion and how you want to kind of draft it up.
+
+Marta Basystiuk   5:42
+OK.
+OK.
+
+INT10   5:59
+Up and then we can we can obviously work it out afterwards.
+
+Marta Basystiuk   6:02
+Many thanks. Thank you for your flexibility. Then I'll start with the personal security and privacy. We do measure the right to life and security and then separately freedom from interference with privacy and what our data actually shows, we are seeing modest improvements.
+
+INT10   6:03
+Of course.
+
+Marta Basystiuk   6:20
+And I am interested to know whether this aligns with your understanding with your with what you see in practice, especially if you think of clients who maybe handle some sensitive data or they operate in in regulated space. We know that unfortunately.
+There is a death penalty in Thailand for for some criminal infringements and I'm curious to know what is your take if if you're comfortable with talking about it.
+
+INT10   6:52
+Yeah, you're talking about like data privacy in general or like?
+
+Marta Basystiuk   6:56
+Yes. So we basically in my question, sorry, it's my mistake. I basically merged 2 separate rights and I did it only because we do see that the perceptions towards how's how those rights are being exercised.
+Improved. There is this positive perception of of how we can exercise separately right to life and security, and then another is freedom from interference with privacy. So if you want to just take one of them and focus on privacy, let's do that. I I just.
+First, I'm curious to know whether you do see the improvements or you you think that you have a different perspective, and if so, why?
+
+INT10   7:39
+It just to my answer here will focus on like I guess privacy first. I think when it comes to kind of right to privacy and and.
+Kind of the data subjects rights to their own data and what to do with that data and information from becoming public and kind of going as far as that right to be forgotten concept we have moved towards so we've enacted and and.
+
+Marta Basystiuk   8:06
+Mhm.
+
+INT10   8:13
+We we're fully enforcing our PDP or private data privacy laws in in Thailand. The the interesting thing is we we literally took Europeans GDPR and translated it like word for word.
+And then enacted that and then obviously enacted sub regulations to to to make it more specific to us. But it's it's definitely a a positive thing where we actually see that there are cases being filed with the.
+The Commission in charge, the regulators, we see movements by state agencies towards respecting and and kind of fully enforcing these data privacy concerns. Data leaks are taken quite seriously and and this has kind of pushed.
+Private operators and especially guys who are holding quite significant amounts of sensitive data such as telcos or banks to really invest in IT infrastructure for the better. Now on the flip side.
+
+Marta Basystiuk   9:12
+Mhm.
+
+INT10   9:20
+Um.
+There has been kind of drawbacks and I think this is something that needs to be.
+Considered over the next few years is the state. Some state agencies have kind of taken a position where they will just argue data privacy concerns when it comes to information requests from the public.
+So this this has been a big issue when it comes to, for example, enforcement of judgments. It can be in any any case, can be any kind of civil matter, doesn't have to be.
+Kind of, you know, public or or admin matter. It could be private, civil matters where you are trying to enforce a judgment or claim certain monies from from an individual. That individual just says, oh, I'm not going to pay.
+
+   10:19
+Mm.
+
+INT10   10:19
+So what you end up having to do to enforce would be just to basically do go through the process of discovery where you find what assets or what cash or what monies they have. Now prior to PDPA you would be able to go in and.
+Basically, walk in with a court judgment and say, hey, can you check what bank accounts or how much money this person has in your bank? Banks nowadays argue data privacy concerns even with a court.
+A court judgment or basically award by by certain government agencies. If it's not escalated or not pushed enough, the banks won't open or won't give out this information. So there are kind of.
+Nuances where it has be made our job a bit more difficult because of these laws, but I think it's it has to do. It's less so to do with the laws themselves, but more so to do with what we call selective.
+
+Marta Basystiuk   11:22
+Mhm.
+
+INT10   11:25
+Enforcement by certain agencies who are more conservative, I think, you know.
+
+Marta Basystiuk   11:31
+That's excellent. And as a follow up, we've had already a few interviews with experts and some of them are human rights defenders and they pointed out to kind of like concerning situation that now they are observing with monitoring of.
+Communication of of their colleagues or intrusion into private life with other surveillance tools. Maybe with I don't want to put words into your mouth, but I know that all of the countries are now undergoing through digital transformation in.
+At various levels and I'm wondering how this have impacted privacy and do you agree with this concern that human rights defenders are having that some people are being surveilled and a privacy?
+Is a big issue for them, especially those activists and journalists and.
+
+INT10   12:30
+OK. So I think there's two layers to it. One would be the monitoring side of things, right, where the state takes action in trying to basically monitor or keep an eye on certain.
+Certain individuals that has you see a lot less of that now.
+
+Marta Basystiuk   12:53
+Mm.
+
+INT10   12:53
+Less recently, but maybe around 10 years ago, eight or nine years ago, the Thai government tried to basically revamp the Internet infrastructure in the country to basically have what we call a single gateway.
+Basically what this means is in in in in at a high level, basically they would have merged all of the channels or I guess the the the let's for for analogy purpose. I guess the lanes in which all the Internet from all the major telcos would run in and out of the country.
+Into a single, let's say, a bottleneck. That way the government can monitor every single kind of movement in or communications in or out of the country. It was a big political issue, public.
+The satisfaction and and and kind of.
+The public made a major noise and the government kind of backed down. But we, I mean since then we we've had a several changes in government, but the idea is still there that.
+The powers that be within the government still has budgets and has teams for these kinds of, I guess, monitoring of political.
+Adversaries. We see this popping up a lot in the news and what I say is public, right? So it's not like me talking like my own opinion, but this is kind of what you see in the news and what is being claimed by various.
+Sides, but essentially during peak of campaigning for elections leading up to this weekend.
+Certain political parties have been known to hire various, I guess, cybersecurity and IT experts to to influence social media.
+Or I guess collect certain data from political adversaries. So that's always you always hear about these things and then on the this one is not really related to.
+Your question, I don't know if we we're going to get to talk about it later, but I think right off the bat if we're talking about these kinds of I guess monitoring and and and freedom of expression, Thailand has a Les Majest law that is.
+One of the very few countries left in the world with that law, and that is still actively enforcing it. What this means is that every year there are numerous cases being filed and numerous individuals being prosecuted because of claims of les mages or basically.
+You were discriminating or saying negative things about the royal household. I think that's the most obvious aspect of Thailand's kind of limitations on freedom of expression.
+
+Marta Basystiuk   16:12
+Mhm.
+Perfect. And thank you so much for pointing on the biggest privacy risks for me. What you mentioned about uneven enforcement is great, the improvements that some of the GDPR, I mean I'm from Europe, so for me the fact that you adopted GDPR is great in in the US unfortunately.
+They don't have anything at the federal level. I mean, I'm here in the US, so hopefully we will follow the lead, but this is all very important. And since you've mentioned freedom of expression, you basically, I think that the next question should be about that.
+Our data shows that there is actually a divergent of opinions between public, general public and experts, where experts, they are less optimistic and they see that there was a decline in how those freedoms.
+Are exercised, while general public they perceive the enjoyment of freedom of opinion and expression more positively. I'm wondering what's your assessment? You've already mentioned a couple of points with respect to freedom of speech, but maybe if you if you can.
+And assert or vice versa disagree with with what our data shows and give us maybe some examples why you think certain way would be perfect.
+
+INT10   17:43
+Okay, it's a good question, actually. I think, you know, so I I think naturally with with technology and social media platforms and the ease of access to to basically internet to to everyone, to the wider
+Population and now everybody's connected. Information is passed quite quickly and quite decent in a decentralized manner. Now that is definitely a good thing when it comes to political movements. It certainly makes things a lot easier.
+For the guys in the movement, of course. On the other hand, governments are obviously more concerned about these types of technologies and then the use of it, especially in political situations and protests. And we've seen these kind of tools and action in kind of recent protests in Thailand or.
+I mean, I I believe in Hong Kong or even other other countries where um.
+We hear that Internet has been shut down, but there are some certain kind of tools where the protesters are connected through some sort of local connection. So with that I I think it's unavoidable and and as time moves on.
+It's it's unavoidable to say that access to information is, is, is, is there, is widely available, is is almost free, if not free.
+But then the downside is because of the decentralization of information and how it it gets passed. In my opinion, there's a legitimate concern of.
+The I I guess the what the word would be the correctness or the accuracy of such information. And I I to me I'm kind of in the camp where.
+I'm a bit more conservative with respect to the information being passed around. I'll give you an example. The the last general election several years ago in Thailand was really the point where I I really thought about it.
+And and it's a question that I think still I'm I'm still asking today and and what what that was was so basically when you you watch the the the general election take place the countings and and whatnot you see every news channel will have kind of the numbers at the bottom.
+The political parties or whatever, even even in the US when you do, when you have your Democrats and Republicans, so channels will come up. Is this a red state or a blue state? Which state has one, right? And then they'll have the Electoral College to see, OK, which president has how many?
+Votes and whatnot. Every at the same time when you go through different news channels, all the numbers are different. So I kind of wondered, So what is the right that there has to be one truth in this one right number in this because it's it's.
+It's an election, right? But the numbers came out all different across all news outlets. So that for me kind of I I was picking my own brains to to kind of wonder like, OK, so how does one get to the truth?
+At that point, which it it might sound silly, but I think it was a very interesting question because the answer was I I couldn't until unless and until I physically go down to that local district to get.
+The the vote count myself, right. Every news outlet have different numbers for for various reasons. But something like this I I think shows you that you know having I mean shows you that you know in today's age it's great to have technology and the.
+The options and the availability of information, but at the same time information can be screwed and can be used in a way that it frames your I guess puts in plants a seed in in people's mind in respect of certain opinions on certain matters.
+
+Marta Basystiuk   22:08
+Yeah.
+
+INT10   22:09
+And I think that's quite dangerous if left unmonitored or on or I guess not monitoring seems seems like a negative connotation when it comes to I guess freedom of information, but I guess with without.
+Proper education of for people who have access to this information.
+
+Marta Basystiuk   22:35
+Thank you. And I'm wondering, with respect, you can choose the civic right you'd like to discuss it. It can be freedom of opinion, it can be access to information, or it can be freedom for assembly and organizing.
+I'm wondering, in your view, who experiences the risk most? We've discussed that there are, with respect to privacy, that there are politically active individuals who.
+Unfortunately can be in different, totally different circumstances with respect to the work that they are doing. But when we think about the how freely people can actually behave or do they need to change their behavior around online speech or reporting or in general public engagement?
+Because of of of some type of perceived legal exposure, I was wondering whether you can tell us if there are any specific group of people. It can be ethnicity, nationality, whatever come to comes to your mind.
+
+INT10   23:38
+Sure, sure.
+I think, um, this question really the the answer to this question will really kind of, uh, give one like someone a bird's eye view of the.
+Not the microcosm of what we call cherry picking in terms of enforcement of certain laws. So when it comes to certain groups of like, so freedom of expression in Thailand, right? When it comes to certain social issues, I'll give you an example we're quite open about.
+Same sex marriage and and the kind of.
+The community around that when people express opinions or when we have kind of events surrounding like let's say during Pride Month, any kind of like parades or events surrounding that the the whole of.
+High society seems to gather around and support and a very they're very strong in terms of, you know, the progressive movements and and and whatnot, which is great. On the other hand, when it comes to certain topics, when it comes to political topics.
+This is when you see people start to either just walk away completely because they they see no point in the risk of sharing certain political opinions. Or what you see is you every year there's a number of.
+Political activists that run into legal troubles, whether that's les majes, which I've mentioned before, or certain certain laws are also in addition to les majes, are also used by political activists to kind of silence or.
+Kind of.
+I guess use as a tool against adversaries. So with the Computer Crime Act, it's an umbrella kind of catch all legislation to it basically says if you post any misleading information, so that kind of captures everything.
+If you post, you participate, you press like or you do anything of that you share or any of that sort of any kind of misinformation or kind of misleading the public, that is a criminal.
+Activity and has criminal liabilities. So a lot of political activists end up getting into running into trouble through the use of the Computer Crime Act. But yeah, my, my, my. In a nutshell, when it comes to political views or political issues, this is.
+Where we see the room starts to get cold, people start to kind of just ignore certain questions because they don't want to answer it. There's no point answering, but when it comes to certain kind of non political issues, it.
+It's it's it's rainbows and and and and and and daisies. People are quite positive about it. I'd say. I'd say Thailand is one of the few countries in the region where we we're very progressive in that sense.
+But politically, kind of opposite ends of the spectrum, I would say, yeah.
+
+Marta Basystiuk   27:06
+That's super helpful. And can I please ask you because you mentioned about Computer Crime Act, unless I captured it's correct name. OK. And before that, I'm just wondering how it correlates with what you've said a little bit earlier that when you watch some TV channels, sometimes you you.
+You are not sure whether the information that they give is actually inaccurate. So and now you said that there is this Computer Crime Act that basically for when you're posting misleading information, it's a crime and it lead to criminal liabilities.
+I'm wondering how this correlates. Is this legal act only covers some particular issues or?
+
+INT10   27:51
+OK, so the Computer Crimes Act is is a is an umbrella legislation that captures kind of every wrongdoing in the digital or on the computer systems. And that's kind of been broadly.
+Scoped out to include like your your phones or any kind of devices that's connected to the Internet essentially and it covers everything from access like hacks to just kind of data breaches or.
+Any spreading of hate information or false information. So on the surface, the law itself is there to serve a very good purpose, right? But what we have seen is.
+Cherry picking of certain actions or certain perpetrators to be, I guess, criminalized against the the this legislation and they're very specific to political activists.
+OK, so if you look up today's or, you know, the past few months of kind of acts or actions using this law, you'll see two groups of people. One would be the scammer, like the the the scam hubs, you know, the call center scammers.
+These guys are being trialed. They're being accused under this legislation, which is what this law was meant to do. The other hand, to a lesser extent, unfortunately, you see some political activists that.
+Are being trialed or being jailed because of this laws. So what this essentially means is the state has.
+
+Marta Basystiuk   29:37
+Mhm.
+
+INT10   29:43
+Taken the position that it will use this tool, this law as a tool against political descendants. Um.
+
+Marta Basystiuk   29:45
+Question.
+M.
+
+INT10   29:56
+And we've we've seen this not just, you know, within one government, but every government that's come in, whether they're the progressive or the conservative side, conservative camp, they'll see, you'll see the use of these laws quite, quite often, especially in times of.
+Of kind of peak political sensitive times, like protests or election season, for example.
+
+Marta Basystiuk   30:18
+Oh.
+OK. That that's super helpful. I know we are already at 30 minutes, so I just want to quickly check in with you whether you're OK with covering a few more questions or you don't have time. Yes, thank you. Thank you so much. It's it's perfect. It's perfect because you are not only providing us your perspective, you then.
+
+INT10   30:33
+Yes, of course, Ken, Ken. Yeah, yeah, my answer's a bit long. I'm sorry. So we can cover more questions.
+
+Marta Basystiuk   30:43
+Back it up with with perfect examples. So that's exactly what we are aiming for, to understand the developments and how they connect or do not connect to what we see with the survey data. Do you want to start with the labor and property rights or do you want to go straight to justice systems? What is your preference?
+
+INT10   31:03
+Um, labor and property rights is good. I think I I would be.
+Answering better than.
+
+Marta Basystiuk   31:09
+That sounds you are answering fantastically. So I'm very happy with all of the answers. Absolutely. So I will be again referencing our data. We are seeing that Thailand's performance on labor rights in general has declined.
+
+INT10   31:14
+Oh, thank you. OK, awesome. That's good to hear.
+
+Marta Basystiuk   31:27
+Compared to 2020, so over the last six years. At the same time, when we asked the general population, the majority of workers, they say that they are free to form unions, they are free to negotiate their salaries with employers and other working conditions and.
+Their overall impression is more positive. I'm wondering from your experience, what is the current reality of labor rights in practice and what developments you believe are explaining or either explaining this trend or vice versa?
+Are showing something else.
+
+INT10   32:07
+So I think Thailand, just a general observation. Thailand has a very pro employee, pro worker work regulations, employment law in in domestically.
+And what this means is the laws, when enacted, are usually enacted with the employee rights in mind. And I'll give you an example. So, so when it comes to labor rights, I I would say we're quite progressive.
+In a sense that yes, you have the options to form unions, you there are various legal protections for, for example, unfair dismissal claims at various government agencies and bodies, such as the labor.
+Tribunal that is separate from, you know, the course of justice to to serve labor disputes. So there's various channels available. Now when I when I when you say that you know over the past five or six years, the data might indicate that we've kind of fallen backwards and and and I would.
+Imagine this might stem from a few reasons, one being wages have not increased in line with basically global inflation and and price increases.
+Minimum wage has still remained low and has not increased that significantly over the past 5-6 years. Same with, you know, your your, your salary, your white collar salaries.
+So I believe part of that might have to do with the salary being that people are feeling like they're getting paid less, they have less purchasing power. That's definitely not a Thai specific issue. It's a global thing, but I I I think.
+You see a bit more of it in Thailand, like, let's say, comparing to places where wages are growing at a higher pace, for example. On the other hand, I think the other part of it.
+That I guess the data indicates that we might be taking steps backwards would be there are certain pockets of society where where we rely hugely on migrant laborers, so in industries such as agriculture.
+Heavy factories, so manufacturing and then the main culprit that you might hear a lot would be fisheries, so.
+Agriculture is a big, really, really big human rights abuser is over. But they're they're guys that tend to run into human rights issues a lot. And over the past 10 years when we hear about.
+The European Union coming in and kind of flagging Thailand for its labor rights abuses and whatnot. It tends to focus on the fisheries and the fishing industry a lot, and it tends to focus on other kind of manufacturing where they rely on heavy.
+We have heavy migrant numbers of migrant laborers. So with the within the shipping industry, what you see is kind of these kind of one-sided contracts where these laborers are being brought in directly from neighboring countries.
+
+Marta Basystiuk   35:39
+Mhm.
+
+INT10   35:52
+Illegally through brokers where they pay the brokers, they take on a large debt to pay the brokers to come to to basically get their job somewhere in Thailand. These jobs require that they're on boats.
+And these are large fishing boats that they go out to seas for weeks at a time, right? So they they go out for weeks at a time, come back. A large chunk of their pay is then deducted to the broker.
+To settle the brokers kind of advances and and services and what what that means is these guys get into this loop where they have to work for a number of years before they're they're able to kind of pay off these debts and make enough money to basically go back and see their family and whatnot.
+And being on boats, obviously, I think human rights and work safety is never an is never something that crosses the, you know, the boat owner, the captain's mind. So you'll see all these things where you have like 50 migrant laborers, undocumented laborers on a fishing boat for two weeks at a time.
+Time fights break out. Some of them die because they're undocumented. Unfortunately, when you hear stories about just, you know, their bodies. I mean, I'm not sure if this is appropriate, but please feel free to remove from the content. But.
+You see people, you hear stories of, you know, 50 boat of 50 going out two weeks later coming in at, you know, 30 or 40 people. You hear that quite often due to, you know, work conditions or fights that break out during, you know, when they're overseas in the middle of the ocean.
+So these instances that and I I I don't mean to pick on the fishing industry, but it really is the main industry that you hear about a lot when it comes to labor abuses. So on that front I I think it that contributes greatly to you know the data.
+Data that you you see about perhaps Thailand making a step backwards with labor, labor and property protections. On the other hand, in kind of a more general when we talk about like let's say in in the cities where you know.
+Most businesses are, I think we're quite moving progressively on that front. From my experience, for example, when we deal with labor cases, a large chunk of my labor.
+Law work comes from basically unfair dismissal claims. We help a number of clients file claims against their employers and these claims are usually processed a lot quicker because it deals with, you know, people's livelihoods and income and.
+There's an assumption that people need to make money to survive, so these cases go on like process relatively quickly comparing to usual kind of criminal or civil cases, for example.
+
+Marta Basystiuk   39:07
+So my blessed.
+
+INT10   39:07
+And just to sorry, just to kind of wrap, kind of wrap things off around that questions, your your question with respect to labor protection, Thailand. So when we talk about unions and and kind of I I guess certain.
+Groups or vulnerable groups within society. I go back again to migrant laborers because it seems to be the most vulnerable part of society.
+And when I say that, and that's because I think there are less government agencies and resources available to these groups when it comes to help or or or I guess resources available to them.
+When needed, comparing to to local Thai workers, I I guess. But I I think that also has it's not it's not done on purpose, but more so to do with, you know, resources being made available for citizens.
+Prioritizing that and also obviously the language barrier with migrant workers.
+Migrant workers.
+
+Marta Basystiuk   40:22
+All ballot and you might know about everything that's happening in the US. We can definitely relate. Super helpful and important. Something that I'd like to double check. You mentioned about the labor tribunal, which is separate from.
+
+INT10   40:29
+Yeah, for sure.
+
+Marta Basystiuk   40:42
+Civil and administrative justice system, from my understanding. And you mentioned that all the cases, they are basically adjudicated in a timely manner. And from my understanding, your overall perception of how this mechanism, I mean labor.
+Tribunal operates is +1. So when just to double check, when there is dispute, when it arises, you would say that most of workers they would go to this specific labour tribunal which will provide them timely and fair remedies. Is it correct or do you see any gap?
+Apps that has to be that we need to be aware of or has to be improved.
+
+INT10   41:28
+No. So I I think definitely it it it's generally positive, maybe negative if you're an employer, I guess. But no, I think every in most, most cases that we we go through the the labor tribunal, what has come out of it is.
+The judges really are really, I guess, involved throughout the process and they truly try to mediate every dispute that comes to them.
+And this usually means that there's usually so. So for example, I'll give you an example, unfair dismissal claims. The law has is very clear in terms of how long you've worked and you're entitled to how much, how many months of severance pay.
+But what the labor tribunal has done is that they've they will take other.
+Ancillaries consideration other than the amount of time you worked and and kind of put that into the calculation of kind of severance pay, meaning kind of the unofficial rule is that employers need to pay more, usually more than what the law will say.
+And the and the Labor Tribunal has taken that position to say that you know this has to do with you see it more in the US but more for like you know mental I guess damages and and the sentiment of having to go through finding a new job and being unemployed. So there's a.
+A bit of that as well that they take into consideration and and and you know it's not just unfair dismissal cases, but what you hear nowadays a lot more of and you never hear about it back in the days would be kind of claims for work safety.
+What conditions? Um.
+So the back in the days you'll see construction sites, you know, guys wearing flip-flops, shirtless, you know, with no head protection. Those are the days of the past and these are kind of really strictly enforced now.
+Which is, which is great. So you see guys in warehouses, you know, wearing kind of those reflective lighting or kind of hard cap shoes or kind of head covering and all that stuff. So, so.
+
+Marta Basystiuk   43:58
+Fastest.
+
+INT10   44:07
+You know it it it it's definitely a a big improvement from 1015 years ago in in in respect of both you know the the tribunals and and the the the channels where workers can claim for certain rights.
+As well as work safety and and and worker protection in the workplace.
+
+Marta Basystiuk   44:32
+Perfect.
+Paul, and can I ask you one question with respect to property protection or you're not comfortable with with that area? Yeah.
+
+INT10   44:42
+Ken, Ken, Ken. Yeah, I forgot about that part.
+
+Marta Basystiuk   44:45
+We do. We placed it under the labor rights and property rights area. So our analysis, I'm looking at it. It also indicates that there is this uneven progress in property protection. Do you agree with that and what factors do you think have contributed to this situation because.
+
+INT10   44:49
+OK.
+
+Marta Basystiuk   45:05
+We are seeing very mixed results and I just want to go to the bottom and understand what's happening with respect to protections.
+
+INT10   45:13
+Oh, maybe to answer this question I I will I'll lead to into the fair and impartial justice part of the the questions as well because it really relates. So when it comes to property protection, right I I I think from my own experience and and.
+
+Marta Basystiuk   45:21
+OK.
+
+INT10   45:30
+I mean, I've been doing this for, I've been doing practicing law for just over 10 years now. But what I see more recently since I I started my own firm and and we've taken on, as I mentioned early on, was we we've taken on a lot of pro bono cases.
+And cases that relate to to be people being defrauded. So cross-border kind of fraud and crime. We like to do that for several reasons. One is one of my partner is a specialist in asset tracing. So when we take on that case we we're really good at finding the perpetrator.
+And where they hid their money. But on the other hand, we do it because of the pro bono program that we have internally where we kind of have our lawyers participate in a certain number of cases each year. Now coming back to this.
+Property protection, right. I think when we talk about property protection in Thailand, we have to talk about the justice system and the court system. And what I mean is the the, the procedures, the timeline.
+And the, I guess the teeth of the the court system. And I think this is where Thailand really, really, really lacks behind certain developed countries, such as I'll give you an example, Singapore.
+
+Marta Basystiuk   46:57
+Mm.
+
+INT10   46:57
+Or from my experience, generally common law countries, you know, US, UK, Singapore, Hong Kong, Australia, these countries tend to have really strong legal systems when it comes to one basically enforcement.
+Of judgments and to tracing or discovery of of of assets for various individuals. And I'll give you an example. So, so during my, you know, over the past few years of doing of assisting clients or doing certain pro bono cases.
+With respect to fraud for clients, right, when we help them in the court and we win a court case, clients are usually over the moon. They're very happy. Oh, you know, we won. We're going to get this money back, blah, blah, blah, with interest, whatever for us.
+That's only half of the of the work. What this means is, yes, I have a piece of paper that says like the adverse party, the the the perpetrator who defrauded me owes me, let's say $1 million plus interest.
+In Thailand, if the guy doesn't pay and he goes into hiding and if he's he's tricky, what he does is he moves all his money or his assets out of his own name, puts it into his friend's name or his family member's name.
+There's very little. Obviously there are with that intention. The law says I can do something about it. But when it comes to putting this in practice, it's very difficult and very impractical for for us to help our clients basically to enforce these judgments.
+An example I I recently gave was an animal shelter being defrauded by an individual in Thailand. So it was an animal shelter in Singapore being defrauded by a Singaporean who lived in Thailand.
+Now that individual, the the fraudster, he, I believe he knew the workings of Thai law and the limitations of it where he he had a Thai wife, but they never registered their marriage. So everything that was bought was bought under the wife's name.
+Meaning he had nothing in his own name other than I would, I would assume bank accounts with very little money just for, you know, his use. We won the case. It was an an obvious case of fraud.
+But the guy just doesn't pay out and and to this day there's really nothing we could have done. We we we we we could have done for the client because the guy has no assets to basically enforce and take over.
+We can just go to his wife and say, look, you know, this was done on purpose with the intent of shielding his own assets against claims.
+So that's a a short like that. That's a prime example of what we see as a a shortcoming of the Thai legal justice system. And this is one example of many, many that we've seen over the years where we won the case, but we can't enforce it.
+And enforcement is not is not cheap because the other party just simply is not paying. And and this comes coming back to your question of property protection, there is a lot of.
+I I guess inefficiencies and red tape that I think can do, can be a lot better and can be improved and can be revitalized and revamped and and just just basically turned inside out with respect of the Thai legal justice system, the procedures and the timeline involved.
+Another example that we recently did for our client if if we we still have a few minutes. So property protection, this one I want to give you an example of. It was a shipping matter, so we represented a client who basically was selling.
+
+Marta Basystiuk   51:14
+Mhm.
+
+INT10   51:19
+Fertilizer from Africa from Ivory Coast came in a a big cargo ship to to port in in Thailand. The dispute happened when the buyer who was in Thailand refused to receive the product from the boat.
+The boat and said that the fertilizer was in poor, it was not the right grade, was, you know, damaged during shipment from Africa. So they refused to take in the fertilizer and then that was the dispute. What this basically means was the seller, my client couldn't offload their product from the ship from the.
+Cargo ship and the ship basically the business. Their business was the ship was to offload the product, go out and basically do more charters and and you know the the ship had other jobs that they had to go out for, but the ship couldn't.
+The ship had to be docked and what we call under arrest in Thailand. Our clients were paying $6000 a day in parking fees. The products couldn't be sold and the boat and they were losing money because the boat couldn't go out and do other charters and take on other jobs.
+
+Marta Basystiuk   52:21
+OK.
+
+INT10   52:31
+So that put our client in a very, very, very already difficult situation to negotiate with the buyer in respect of the quality of the products. It it basically means that it was in my client's interest to accept whatever.
+Negotiation took place in in the interest of getting the boat out as soon as possible to make more money, right? So what what ended up happening was the the buyer had brought in a third party.
+
+Marta Basystiuk   52:48
+No.
+
+INT10   53:04
+Surveyor to basically look at the product and that took a few weeks to you know and Long story short, my client ended up losing a few $1,000,000 just because.
+The buyer had basically disputed their claim on the product and because under Thai civil procedures, unless and until that case was basically.
+Finished in in court and basically a judgment was passed or the case was has been fully settled. The boat itself couldn't leave port and the product itself had to stay within the warehouse. It couldn't be used.
+So that's a really good example of an inefficiency when it comes to property and and protection in Thailand, and that's due to the inefficiency of the court system in in a in a legal system such as Singapore and and my Singaporean.
+Colleagues were quite surprised when this all took place, because in Singapore, what would have happened was the court would have basically taken in all the information and said OK, the boat can leave and go do its whatever. But this case will kind of go on without needing the boat in place, which I mean, you know, to the.
+To the layman person, why would the boat need to be parked for no reason, right? And and this is basically one like a few examples of the legal system in Thailand not being up to par.
+That would kind of allow for or stimulate business and investments in Thailand. And and I say this a lot, I'm Thai myself, so I I'm not happy saying it, but when it comes to foreign investors coming in.
+I always say that, you know, it's not so much the political or economic environment that you should be careful for, but it's the legal system that you should be careful for because it's it's there's there's so limited in terms of what it can do for you.
+
+Marta Basystiuk   55:18
+That's amazing. We are at one hour and you pointed of things that our data also shows like delays is a key concern and even enforcement of judgments and you basically gave us the example. So we understand that it's logical and accurate. So it's great. Santiago, do you have any questions?
+Before I am, I will jump to the closing part of this interview. Is there anything that?
+Or.
+
+Santiago Pardo   55:44
+Oh, not at the moment. Thank you for all your answers, sis. It's great to hear you.
+
+INT10   55:48
+Of suppressed.
+
+Marta Basystiuk   55:48
+Yeah, they are so on point. Excellent. OK, so I will wrap up. Then I'll ask you, Paul, if there are anything maybe you remember from the list of our questions or outside of the scope that we need to know of that somehow influence the general state of fundamental rights it can be.
+The perspective of business is something that you mentioned that.
+
+INT10   56:12
+Um, OK. So I think the mess, the general message, I guess if I could summarize kind of Thailand's.
+Legal rights and and kind of access to to to to justice and and legal system would be that it's there. It's very inefficient but it's there so everyone has access to it but whether.
+That system, once you have access to it, serves you in a timely manner is the kind of the discourse I would say. So what I what I mean is if you if you have, if you're someone of influence or if you know someone or if you have connections.
+With certain agencies, your matter or your case will go a lot quicker than I guess the average Joe without any kind of connections or or any lubricating, if you will.
+And and this is true not just within the courts, but also when it comes to government agencies like licensing or just kind of doing your everyday filings with government agencies, the government, it's become custom, I think. So high culture.
+Partly culture has to do with it. We're a very relationship based culture when it comes to doing business, a lot more so than the West where it's very, you know, it's business, it's strictly business in Thailand. It's if if I don't like you for whatever reason, even though you are the best.
+For my business, I might not do business with you. It's kind of like that. And when it comes to kind of government dealings with government or the political system, that sentiment has subconsciously and unintentionally trickled down into those.
+Areas as well where you know you can be talking to a government agency and they will just say, OK, you know, we'll process this. The law says I have 60 days to process this. I'll process it in 60 days. But if you know all hours the same, you call someone within that agency, let's say someone in management within that agency, say, hey.
+You know, I'm popping by. I have an errand to run. Can you help me out? That officer will basically, Oh yeah, well, the response will change from, you know, we'll process this in 60 days to, Oh yeah, we'll have this ready for you within 24 or 48 hours.
+Um. And that happens quite often. Um.
+
+Marta Basystiuk   58:54
+Do you see it as a, I don't want to call it a trans, but intricate characteristic of Thailand's society? Or is it something that you would argue that needs to be improved? Because obviously there is a thin line between nepotism or other forms of corruption and I'm always.
+
+INT10   58:54
+Yeah.
+It's.
+
+Marta Basystiuk   59:13
+Are we thinking from the perspective of impartiality and independence of justice institutions or any other institutions? And I'm I'm seeing Santiago smiling because he has already heard me talking about it from the perspective of what?
+Key steps or initiatives or reforms that should be taken either for the justice sector or in general, what would you say? What what would you, what would you highlight that we need to keep an eye on?
+
+INT10   59:41
+You know, I you you kind of answered that question. I I think there's a a really thin line with that impartiality and corruption on one hand. Look, I I think the work culture is is the Thai culture, the Thai way of working is is you know, it's positive, it has its, its, its benefits.
+People are more relaxed and and Thai people in general. This is why people say like you know Thai people are nice and and they're always smiling is Thai people in general are non confrontational. So when it when when there's a a problem.
+
+Marta Basystiuk   1:00:02
+Yeah.
+I found.
+It.
+
+INT10   1:00:33
+When someone comes and takes power, the society largely will complain, but will say, oh, life goes on and you know, do not not do much about it. That has to change.
+I think if Thailand is to be, is to really be competitive in the world economy, and I say this from strictly from a business perspective, if Thailand is to be compete commercially with other players around the world like Singapore, Hong Kong, these super fast-paced.
+Um, environments. It needs to shift from that um and kind of have a more Western outlook in terms of doing things and more kind of objective views on certain things. Um, but at the same time, these kind of stuff happens.
+All over the world, I guess it's more obvious in Thailand, just it's a cultural discourse. But like you said, there's a fine line and I think we have to, it doesn't have to be a drastic shift, but make it less obvious.
+
+Marta Basystiuk   1:01:25
+Absolutely.
+
+INT10   1:01:40
+So that when it comes to foreign investors, it's at least an even playing field and foreigners are not feeling like they're being taken for a run or the they're being milked for their money coming into Thailand, for example.
+
+Marta Basystiuk   1:01:53
+That's excellent. And my last, I promise you, my last question is my favorite one. I always ask experts at the end of our conversation if they can to describe the state of fundamental rights in one sentence. As of now, what would it be?
+
+INT10   1:01:57
+Yeah, no, of course, of course. Sure.
+Sentence fundamental rights.
+Oh, interesting. Give me, give me a few minutes. Um.
+
+Marta Basystiuk   1:02:21
+Yeah, I always like to put people on the spot.
+
+INT10   1:02:23
+It's there fundamental rights. It's there, but enforcement is is usually cherry picked.
+
+Marta Basystiuk   1:02:32
+That's excellent.
+
+INT10   1:02:33
+Yeah.
+
+Marta Basystiuk   1:02:35
+Excellent. Thank you so very much.
+
+INT10   1:02:36
+Yeah.
+That's that's basically the the what Thailand is really like, you know, you talk about, oh, Thailand doesn't have this, doesn't have we have, we have all that good stuff, all the human rights, all the protection. It's just we don't, we don't enforce it.
+Unless, you know, we we we choose to, yeah.
+
+Marta Basystiuk   1:02:56
+Not yet.
+Yeah, and I hope so. It's very important for us. We are now working closer with OECD and I know that Thailand is on its path to become a full-fledged member. So I think all of those conversations are very important. And the fact that you've shared with us so many excellent examples and perspectives, I I can't thank you enough.
+
+INT10   1:03:07
+Yeah.
+
+Marta Basystiuk   1:03:18
+I am very grateful. I hope that you had a great start to your day. I had a great end of my day, but as we discussed, I will not attribute your quote at this time. We will share with you the written output and then we will decide whether you'd like to see your name in the report or not.
+
+INT10   1:03:18
+Oh, no, no. Thank you guys. Yeah.
+That.
+So.
+Yes.
+
+Marta Basystiuk   1:03:37
+or not. But it was a real pleasure and I hope you will enjoy the rest of your day.
+
+INT10   1:03:42
+Yeah, thank you guys. I know it's a bit late, so I I'm sorry for taking out your your evening and I hope, I hope my responses didn't make your jobs too hard.
+
+Marta Basystiuk   1:03:45
+No, I.
+No, I I'm actually now energized. I've learned so much. So I really appreciate that. And I will learn more and I will now delve deeper into all of the acts that you mentioned as well. I want to read about them and the cases of just brought me back to my days when I practiced law. So thank you so much.
+
+INT10   1:03:54
+OK, good, good.
+Awesome.
+
+INT10   1:04:04
+When you're practicing, right. OK. Thank you guys so much. Have a good night. Yeah. Thank you very much. Bye. Bye.
+
+Marta Basystiuk   1:04:06
+Yeah.
+OK. Thank you. Bye, you too.
+

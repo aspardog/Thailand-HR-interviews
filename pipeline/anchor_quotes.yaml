@@ -1,0 +1,286 @@
+# Anchor Quotes: Thailand Human Rights Report 2025
+# Extraídas del Quote Bank del dashboard HTML (HR-INT.html)
+# Estas 22 quotes DEBEN aparecer en cada pipeline run
+
+# ============================================================
+# REGLAS DE VALIDACIÓN
+# ============================================================
+validation_rules:
+  total_anchors: 22
+  pass_threshold: 100  # % de quotes que deben estar presentes
+  # Una quote se considera "encontrada" si:
+  # 1. El text_fragment aparece en los outputs (puede ser substring)
+  # 2. Está atribuida a la fuente correcta (expected_source)
+  # 3. Aparece en contenido relacionado con la dimensión esperada
+
+# ============================================================
+# DIMENSION 0: Overall Assessment (5 quotes)
+# ============================================================
+anchor_quotes:
+
+  - id: AQ01
+    dimension: 0
+    theme: "enforcement"
+    tags: ["Summary", "Critical"]
+    text: "Fundamental rights. It's there, but enforcement is usually cherry picked."
+    text_fragment: "enforcement is usually cherry picked"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: critical
+
+  - id: AQ02
+    dimension: 0
+    theme: "enforcement"
+    tags: ["Enforcement"]
+    text: "We have all that good stuff, all the human rights, all the protection. It's just we don't enforce it. Unless, you know, we choose to."
+    text_fragment: "we don't enforce it. Unless, you know, we choose to"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: critical
+
+  - id: AQ03
+    dimension: 0
+    theme: "warning"
+    tags: ["Warning", "Critical"]
+    text: "The current picture is great but from what I see is like a downhill of the trend."
+    text_fragment: "downhill of the trend"
+    expected_source: INT07
+    source_description: "OHCHR Representative"
+    priority: critical
+
+  - id: AQ04
+    dimension: 0
+    theme: "summary"
+    tags: ["Summary"]
+    text: "It's a story of two halves... simultaneous progress and regression."
+    text_fragment: "story of two halves"
+    expected_source: INT02
+    source_description: "UNDP Representatives"
+    priority: critical
+
+  - id: AQ05
+    dimension: 0
+    theme: "enforcement"
+    tags: ["Enforcement", "Critical"]
+    text: "The legal framework for human rights exists... but selective enforcement undermines it completely."
+    text_fragment: "selective enforcement undermines it completely"
+    expected_source: INT06
+    source_description: "Thai Lawyers for Human Rights"
+    priority: critical
+
+# ============================================================
+# DIMENSION 1: Civil and Political Rights (5 quotes)
+# ============================================================
+
+  - id: AQ06
+    dimension: 1
+    theme: "deepsouth"
+    tags: ["Deep South", "Critical"]
+    text: "Justice in the Deep South is two-tiered... Thai Buddhists and Malay Muslims are treated very differently by the system."
+    text_fragment: "Deep South is two-tiered"
+    expected_source: INT01
+    source_description: "Deep South Expert"
+    priority: critical
+
+  - id: AQ07
+    dimension: 1
+    theme: "section112"
+    tags: ["Paradox"]
+    text: "On certain social issues... we're very progressive. But politically, kind of opposite ends of the spectrum."
+    text_fragment: "politically, kind of opposite ends of the spectrum"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: important
+
+  - id: AQ08
+    dimension: 1
+    theme: "section112"
+    tags: ["Section 112"]
+    text: "You cannot talk about the monarchy everywhere in Thailand right now."
+    text_fragment: "cannot talk about the monarchy"
+    expected_source: INT09
+    source_description: "Civic Tech Expert"
+    priority: critical
+
+  - id: AQ09
+    dimension: 1
+    theme: "discrimination"
+    tags: ["Discrimination"]
+    text: "Thailand doesn't have a comprehensive anti-discrimination law... a lot of groups are being left behind."
+    text_fragment: "comprehensive anti-discrimination law"
+    expected_source: INT07
+    source_description: "OHCHR Representative"
+    priority: critical
+
+  - id: AQ10
+    dimension: 1
+    theme: "surveillance"
+    tags: ["Surveillance", "Critical"]
+    text: "Pegasus spyware was found on devices of Thai activists."
+    text_fragment: "Pegasus spyware"
+    expected_source: INT06
+    source_description: "Thai Lawyers for Human Rights"
+    priority: important
+
+# ============================================================
+# DIMENSION 2: Participation and Access to Information (3 quotes)
+# ============================================================
+
+  - id: AQ11
+    dimension: 2
+    theme: "constitutional_court"
+    tags: ["Constitutional Court", "Critical"]
+    text: "The Constitutional Court... just a small group of people can demolish everything we did during that big day [election]."
+    text_fragment: "small group of people can demolish everything"
+    expected_source: INT09
+    source_description: "Civic Tech Expert"
+    priority: critical
+
+  - id: AQ12
+    dimension: 2
+    theme: "information"
+    tags: ["Information"]
+    text: "It's accessible, but not understandable and not usable for the civil society."
+    text_fragment: "accessible, but not understandable"
+    expected_source: INT09
+    source_description: "Civic Tech Expert"
+    priority: critical
+
+  - id: AQ13
+    dimension: 2
+    theme: "progress"
+    tags: ["Youth", "Progress"]
+    text: "Youth participation has increased dramatically... the 2020-2021 protests awakened a generation."
+    text_fragment: "awakened a generation"
+    expected_source: INT05
+    source_description: "Labor/Civic Experts"
+    priority: important
+
+# ============================================================
+# DIMENSION 3: Labor Rights and Property Rights (4 quotes)
+# ============================================================
+
+  - id: AQ14
+    dimension: 3
+    theme: "migrants"
+    tags: ["Forced Labor", "Critical"]
+    text: "Migrant workers in the fishing industry face conditions that amount to forced labor."
+    text_fragment: "conditions that amount to forced labor"
+    expected_source: INT05
+    source_description: "Labor/Civic Experts"
+    priority: critical
+
+  - id: AQ15
+    dimension: 3
+    theme: "migrants"
+    tags: ["Fishing", "Deaths", "Critical"]
+    text: "Boats leave with 50 workers and return with 30-40... due to work conditions or fights that break out."
+    text_fragment: "50 workers and return with 30-40"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: critical
+
+  - id: AQ16
+    dimension: 3
+    theme: "progress"
+    tags: ["Labor Court", "Progress"]
+    text: "The Labor Court system is actually one of the better functioning parts of Thai justice."
+    text_fragment: "better functioning parts of Thai justice"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: important
+
+  - id: AQ17
+    dimension: 3
+    theme: "enforcement"
+    tags: ["Enforcement"]
+    text: "Winning a court case is only half the work. The paper exists but enforcement is the issue."
+    text_fragment: "only half the work"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: critical
+
+# ============================================================
+# DIMENSION 4: Fair and Impartial Justice (5 quotes)
+# ============================================================
+
+  - id: AQ18
+    dimension: 4
+    theme: "justice"
+    tags: ["Political Cases", "Critical"]
+    text: "In political cases, the prosecution follows a pattern... arrests timed for maximum disruption, bail denied."
+    text_fragment: "arrests timed for maximum disruption"
+    expected_source: INT06
+    source_description: "Thai Lawyers for Human Rights"
+    priority: critical
+
+  - id: AQ19
+    dimension: 4
+    theme: "justice"
+    tags: ["Due Process", "Critical"]
+    text: "They go beyond the burden of proof, they don't apply presumption of innocence."
+    text_fragment: "don't apply presumption of innocence"
+    expected_source: INT07
+    source_description: "OHCHR Representative"
+    priority: critical
+
+  - id: AQ20
+    dimension: 4
+    theme: "justice"
+    tags: ["Connections"]
+    text: "If you know someone, your matter will go a lot quicker than the average Joe."
+    text_fragment: "quicker than the average Joe"
+    expected_source: INT08
+    source_description: "Private Practice Lawyer"
+    priority: important
+
+  - id: AQ21
+    dimension: 4
+    theme: "justice"
+    tags: ["Hopelessness"]
+    text: "People feel hopeless about the justice system."
+    text_fragment: "hopeless about the justice system"
+    expected_source: INT09
+    source_description: "Civic Tech Expert"
+    priority: important
+
+  - id: AQ22
+    dimension: 0
+    theme: "progress"
+    tags: ["Progress", "Landmark"]
+    text: "The Marriage Equality Act is a real achievement... Thailand is the first country in Southeast Asia."
+    text_fragment: "first country in Southeast Asia"
+    expected_source: INT02
+    source_description: "UNDP Representatives"
+    priority: critical
+
+# ============================================================
+# RESUMEN POR PRIORIDAD
+# ============================================================
+# Critical: 16 quotes (DEBEN estar al 100%)
+# Important: 6 quotes (objetivo 80%)
+#
+# DISTRIBUCIÓN POR DIMENSIÓN:
+# - Dimension 0: 6 quotes (AQ01-AQ05, AQ22)
+# - Dimension 1: 5 quotes (AQ06-AQ10)
+# - Dimension 2: 3 quotes (AQ11-AQ13)
+# - Dimension 3: 4 quotes (AQ14-AQ17)
+# - Dimension 4: 4 quotes (AQ18-AQ21)
+#
+# DISTRIBUCIÓN POR FUENTE:
+# - INT01: 1 quote
+# - INT02: 2 quotes
+# - INT05: 2 quotes
+# - INT06: 3 quotes
+# - INT07: 3 quotes
+# - INT08: 7 quotes
+# - INT09: 4 quotes
+
+# ============================================================
+# NOTAS PARA ACTUALIZACIONES
+# ============================================================
+# Cuando se agreguen nuevas entrevistas:
+# 1. Revisar si hay quotes nuevas que deban ser anchor
+# 2. Agregar con IDs incrementales (AQ23, AQ24, etc.)
+# 3. Mantener balance entre dimensiones
+# 4. Priorizar quotes que capturen hallazgos únicos

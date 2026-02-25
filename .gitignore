@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# R files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Office files (use markdown instead)
+*.docx
+*.xlsx
+~$*
+*.tmp
+
+# Draft outputs (work in progress)
+Outcome/
+
+# Original files with names (if any)
+Original/
+
+# Backup files
+*.bak
+*.backup
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

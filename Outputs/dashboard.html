@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Human Rights Report 2025 - Qualitative Analysis Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --success: #38a169;
+            --warning: #d69e2e;
+            --danger: #e53e3e;
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --gray: #718096;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tabs */
+        .tab-container {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tabs {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            color: var(--gray);
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .tab:hover {
+            color: var(--accent);
+            background: rgba(49, 130, 206, 0.05);
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 1rem 1.5rem;
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header:hover {
+            background: #edf2f7;
+        }
+
+        .card-header h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .card.expanded .card-body {
+            display: block;
+        }
+
+        .card-header .toggle-icon {
+            transition: transform 0.2s;
+            font-size: 1.25rem;
+            color: var(--gray);
+        }
+
+        .card.expanded .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 0.25rem;
+        }
+
+        .tag-challenge { background: #fed7d7; color: #c53030; }
+        .tag-progress { background: #c6f6d5; color: #276749; }
+        .tag-dimension { background: #bee3f8; color: #2b6cb0; }
+        .tag-group { background: #e9d8fd; color: #6b46c1; }
+        .tag-geo { background: #feebc8; color: #c05621; }
+        .tag-source { background: #e2e8f0; color: #4a5568; font-family: monospace; }
+
+        /* Interview Grid */
+        .interview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interview-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .interview-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .interview-header {
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .interview-header h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .interview-header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .interview-body {
+            padding: 1.25rem;
+        }
+
+        .interview-body h5 {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .interview-body ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .interview-body li {
+            padding: 0.35rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .interview-body li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .key-quote {
+            background: #f7fafc;
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Dimension Cards */
+        .dimension-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .dimension-header {
+            padding: 1.5rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dimension-header.dim0 { background: linear-gradient(135deg, #4a5568, #2d3748); }
+        .dimension-header.dim1 { background: linear-gradient(135deg, #3182ce, #2b6cb0); }
+        .dimension-header.dim2 { background: linear-gradient(135deg, #38a169, #276749); }
+        .dimension-header.dim3 { background: linear-gradient(135deg, #d69e2e, #b7791f); }
+        .dimension-header.dim4 { background: linear-gradient(135deg, #9f7aea, #805ad5); }
+
+        .dimension-header h3 {
+            font-size: 1.25rem;
+        }
+
+        .dimension-header .dimension-number {
+            font-size: 2rem;
+            font-weight: 700;
+            opacity: 0.3;
+        }
+
+        .dimension-body {
+            padding: 1.5rem;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .findings-section h4 {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .findings-section ul {
+            list-style: none;
+        }
+
+        .findings-section li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .findings-section li:last-child {
+            border-bottom: none;
+        }
+
+        .findings-section li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .challenges li::before { background: var(--danger); }
+        .progress li::before { background: var(--success); }
+
+        .quant-connection {
+            background: #ebf8ff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .quant-connection h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .quant-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+        }
+
+        .quant-trend {
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .trend-up { background: #c6f6d5; color: #276749; }
+        .trend-down { background: #fed7d7; color: #c53030; }
+
+        /* Quote Bank */
+        .quote-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .filter-group label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select, .filter-group input {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            min-width: 200px;
+        }
+
+        .quote-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+            transition: box-shadow 0.2s;
+        }
+
+        .quote-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .quote-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .quote-source {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .quote-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .quote-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .copy-btn, .context-btn {
+            background: var(--light);
+            border: 1px solid var(--border);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .context-btn {
+            background: #ebf8ff;
+            border-color: var(--accent);
+            color: var(--secondary);
+        }
+
+        .context-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .source-ref {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--gray);
+            background: var(--light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        /* Context Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .modal-header .source-info {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-family: monospace;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .context-quote {
+            background: #fffbeb;
+            border: 2px solid var(--warning);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .context-quote::before {
+            content: "Selected Quote";
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--warning);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-style: normal;
+        }
+
+        .context-lines {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+
+        .context-line {
+            display: flex;
+            padding: 0.25rem 0;
+        }
+
+        .context-line:hover {
+            background: #edf2f7;
+        }
+
+        .line-number {
+            color: var(--gray);
+            min-width: 50px;
+            text-align: right;
+            padding-right: 1rem;
+            user-select: none;
+            border-right: 1px solid var(--border);
+            margin-right: 1rem;
+        }
+
+        .line-content {
+            flex: 1;
+        }
+
+        .context-line.highlighted {
+            background: #fefcbf;
+            border-left: 3px solid var(--warning);
+            margin-left: -3px;
+        }
+
+        .context-line.highlighted .line-content {
+            font-weight: 500;
+        }
+
+        .context-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-align: center;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, #ebf8ff, #e6fffa);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #bee3f8;
+        }
+
+        .summary-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .summary-box blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--secondary);
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-stats {
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.25rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+            }
+
+            .tab {
+                padding: 0.75rem 1rem;
+                white-space: nowrap;
+            }
+
+            .interview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .modal {
+                margin: 1rem;
+                max-height: 90vh;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .tab-container, .quote-filters, .copy-btn, .context-btn, .modal-overlay {
+                display: none;
+            }
+
+            .tab-content {
+                display: block !important;
+            }
+
+            .card-body {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Thailand Human Rights Report 2025</h1>
+        <p>Qualitative Analysis Dashboard - Expert Interview Synthesis</p>
+        <div class="header-stats">
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Experts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Interviews</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Dimensions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95</div>
+                <div class="stat-label">Verified Quotes</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab active" data-tab="interviews">Interview Summaries</button>
+            <button class="tab" data-tab="dimensions">Findings by Dimension</button>
+            <button class="tab" data-tab="quotes">Quote Bank</button>
+        </div>
+    </div>
+
+    <!-- Context Modal -->
+    <div class="modal-overlay" id="contextModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <h3 id="modalTitle">Interview Context</h3>
+                    <div class="source-info" id="modalSource"></div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="context-quote" id="modalQuote"></div>
+                <div class="context-lines" id="modalContext"></div>
+                <div class="context-note">
+                    Context shows lines surrounding the quote in the original transcript.
+                    Highlighted lines contain the quoted text.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- TAB 1: Interview Summaries -->
+        <div id="interviews" class="tab-content active">
+            <div class="summary-box">
+                <h3>Expert Consensus</h3>
+                <blockquote>"Fundamental rights exist, but enforcement is usually cherry-picked."</blockquote>
+                <p>All 11 experts agree Thailand has improved since the post-coup era, but identify persistent structural challenges and fragility in rights protections.</p>
+            </div>
+
+            <div class="interview-grid">
+                <!-- INT01 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT01 - Deep South Expert</h4>
+                        <p>Human Rights Defender - Pattani, Yala, Narathiwat</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Special laws (Emergency Decree, Martial Law) enable violations</li>
+                            <li>Ethnic discrimination against Malay Muslims</li>
+                            <li>Torture and extrajudicial killings with impunity</li>
+                            <li>Tak Bai case (78 deaths) still unresolved</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"Despite fewer casualties compared to previous years, people don't feel safer or more free."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-group">VG-MM</span>
+                            <span class="tag tag-geo">GEO-DS</span>
+                            <span class="tag tag-challenge">Critical</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT02 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT02 - UNDP Representatives</h4>
+                        <p>Human Rights and Governance Specialists</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Structural legacy of military governance</li>
+                            <li>Progress on LGBT rights (Marriage Equality Act)</li>
+                            <li>Anti-Torture Act (2022) as milestone</li>
+                            <li>Shift from "warfare to lawfare"</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"It's a story of two halves... simultaneous progress and regression."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-progress">Progress</span>
+                            <span class="tag tag-challenge">Fragile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT03 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT03 - Employment Lawyer</h4>
+                        <p>Labor Rights Specialist</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Laws exist but enforcement is weak</li>
+                            <li>Labor court works independently</li>
+                            <li>Criminal law overused in Thailand</li>
+                            <li>Labor situation "getting improved"</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"For the labor court, I think that it acts really independently. No one can put pressure on the labor court."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-dimension">Labor Rights</span>
+                            <span class="tag tag-progress">Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT04 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT04 - Academic</h4>
+                        <p>University Professor / Political Analysis</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Institutions as "smokescreen"</li>
+                            <li>Grand fatigue among citizens</li>
+                            <li>Constitutional Court as political tool</li>
+                            <li>Forum shopping in SLAPP cases</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"I don't see a way out at all. The problem is too intertwined to be resolved with a few laws or regulations."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-challenge">Critical</span>
+                            <span class="tag tag-dimension">Structural</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT05 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT05 - HR NGO Representative</h4>
+                        <p>Legal Aid NGO / Migrant Workers Focus</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Migrant workers can't form unions</li>
+                            <li>Deep South under "military state"</li>
+                            <li>Civic space is illusory</li>
+                            <li>Senior judges pressure juniors</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"Migrant workers can't form their own unions... that's one of the big problems."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-group">VG-MW</span>
+                            <span class="tag tag-geo">GEO-DS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT06 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT06 - Thai Lawyers for Human Rights</h4>
+                        <p>Legal Aid / Political Prosecution Cases</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Section 112 prosecutions increasing</li>
+                            <li>Political cases: bail denied, high convictions</li>
+                            <li>Pegasus spyware documented on activists</li>
+                            <li>Draft NGO law threatens civic space</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"The human rights situation looks good, but it's a lot worse than it looks."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-group">VG-PA</span>
+                            <span class="tag tag-group">VG-HR</span>
+                            <span class="tag tag-challenge">Critical</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT07 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT07 - International HR Expert</h4>
+                        <p>Works with OHCHR</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>No comprehensive anti-discrimination law</li>
+                            <li>Enforced disappearance impunity</li>
+                            <li>Rising anti-migrant sentiment</li>
+                            <li>Trend may be "going downhill"</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"The current picture is great but from what I see is like a downhill of the trend."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-group">VG-MW</span>
+                            <span class="tag tag-challenge">Warning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT08 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT08 - Commercial Lawyer</h4>
+                        <p>Corporate/Private Practice</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>PDPA (privacy law) modeled on GDPR</li>
+                            <li>Judgment enforcement is "half the battle"</li>
+                            <li>Fishing industry deaths documented</li>
+                            <li>Connections matter in justice system</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"Fundamental rights. It's there, but enforcement is usually cherry picked."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-dimension">Civil Justice</span>
+                            <span class="tag tag-dimension">Privacy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INT09 -->
+                <div class="interview-card">
+                    <div class="interview-header">
+                        <h4>INT09 - Civic Tech Expert</h4>
+                        <p>Transparency & Digital Participation (WeVis)</p>
+                    </div>
+                    <div class="interview-body">
+                        <h5>Key Themes</h5>
+                        <ul>
+                            <li>Information accessible but not usable</li>
+                            <li>Constitutional Court overrides democracy</li>
+                            <li>People "hopeless about justice system"</li>
+                            <li>Section 112 prosecutions monthly</li>
+                        </ul>
+                        <h5>Key Quote</h5>
+                        <div class="key-quote">"It's accessible, but not understandable and not usable for the civil society."</div>
+                        <div style="margin-top: 0.75rem">
+                            <span class="tag tag-dimension">Access to Info</span>
+                            <span class="tag tag-geo">GEO-RU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: Findings by Dimension -->
+        <div id="dimensions" class="tab-content">
+
+            <!-- Dimension 0 -->
+            <div class="dimension-card">
+                <div class="dimension-header dim0">
+                    <div>
+                        <h3>Dimension 0: Current Status of Fundamental Rights</h3>
+                        <p style="opacity: 0.9; margin-top: 0.25rem;">Overall Assessment</p>
+                    </div>
+                    <div class="dimension-number">0</div>
+                </div>
+                <div class="dimension-body">
+                    <div class="summary-box" style="margin-bottom: 1.5rem;">
+                        <blockquote>"Improved from post-coup era, but fragile and incomplete"</blockquote>
+                    </div>
+                    <div class="findings-grid">
+                        <div class="findings-section challenges">
+                            <h4>Key Challenges</h4>
+                            <ul>
+                                <li><strong>Section 112 (Lese-Majeste)</strong> - Creates chilling effect on all political expression</li>
+                                <li><strong>Selective Enforcement</strong> - Laws applied unevenly based on political alignment</li>
+                                <li><strong>Military Legacy</strong> - Influence embedded in institutions</li>
+                                <li><strong>Deep South Conflict</strong> - Special laws, ethnic discrimination, impunity</li>
+                                <li><strong>Migrant Exploitation</strong> - Fishing industry forced labor</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section progress">
+                            <h4>Areas of Progress</h4>
+                            <ul>
+                                <li><strong>Marriage Equality Act</strong> - First in Southeast Asia</li>
+                                <li><strong>Anti-Torture Act (2022)</strong> - New legal framework</li>
+                                <li><strong>Youth Engagement</strong> - 2020-2021 protests awakened generation</li>
+                                <li><strong>Digital Government</strong> - Thai ID tools working</li>
+                                <li><strong>Labor Court</strong> - Efficient, accessible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 1 -->
+            <div class="dimension-card">
+                <div class="dimension-header dim1">
+                    <div>
+                        <h3>Dimension 1: Civil and Political Rights</h3>
+                        <p style="opacity: 0.9; margin-top: 0.25rem;">6 Sub-indicators</p>
+                    </div>
+                    <div class="dimension-number">1</div>
+                </div>
+                <div class="dimension-body">
+                    <div class="findings-grid">
+                        <div class="findings-section challenges">
+                            <h4>Key Challenges</h4>
+                            <ul>
+                                <li><strong>Section 112</strong> - Prosecutions for posts, shares, likes</li>
+                                <li><strong>Computer Crime Act</strong> - Catch-all for critics</li>
+                                <li><strong>No Anti-Discrimination Law</strong> - Groups left behind</li>
+                                <li><strong>Deep South</strong> - Torture, surveillance, impunity</li>
+                                <li><strong>Pegasus Spyware</strong> - Documented on activists</li>
+                                <li><strong>Constitutional Court</strong> - Banned reform discussion</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section progress">
+                            <h4>Areas of Progress</h4>
+                            <ul>
+                                <li><strong>PDPA Privacy Law</strong> - GDPR-modeled framework</li>
+                                <li><strong>Social Issues</strong> - Progressive on non-political topics</li>
+                                <li><strong>Protests Tolerated</strong> - More than military era</li>
+                                <li><strong>Religious Freedom</strong> - Generally respected</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quant-connection">
+                        <h4>Quantitative Connections</h4>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">-4%</span>
+                            <span>Freedom of Expression - <strong>Confirmed</strong>: Section 112, self-censorship</span>
+                        </div>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">-2%</span>
+                            <span>Equality - <strong>Confirmed</strong>: No comprehensive law, migrant hostility</span>
+                        </div>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-up">+32%</span>
+                            <span>Privacy - <strong>Challenged</strong>: Formal law improved; activists surveilled</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 2 -->
+            <div class="dimension-card">
+                <div class="dimension-header dim2">
+                    <div>
+                        <h3>Dimension 2: Participation and Access to Information</h3>
+                        <p style="opacity: 0.9; margin-top: 0.25rem;">4 Sub-indicators</p>
+                    </div>
+                    <div class="dimension-number">2</div>
+                </div>
+                <div class="dimension-body">
+                    <div class="findings-grid">
+                        <div class="findings-section challenges">
+                            <h4>Key Challenges</h4>
+                            <ul>
+                                <li><strong>NHRC Lacks Teeth</strong> - Non-binding recommendations</li>
+                                <li><strong>10,000 Petition</strong> - Mechanism removed from constitution</li>
+                                <li><strong>Tokenistic Hearings</strong> - No feedback on influence</li>
+                                <li><strong>Information Format</strong> - "90,000 pages of scanned PDFs"</li>
+                                <li><strong>Digital Divide</strong> - Rural/elderly excluded</li>
+                                <li><strong>Constitutional Court</strong> - Can override elections</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section progress">
+                            <h4>Areas of Progress</h4>
+                            <ul>
+                                <li><strong>E-Petitions</strong> - Thai ID integration</li>
+                                <li><strong>Youth Engagement</strong> - Progressive parties gaining</li>
+                                <li><strong>More Info Online</strong> - Than 10 years ago</li>
+                                <li><strong>Referendum Campaigns</strong> - Proceeding openly</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quant-connection">
+                        <h4>Quantitative Connections</h4>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">&#8595;</span>
+                            <span>Civic Participation - <strong>Confirmed</strong>: Structural barriers despite youth mobilization</span>
+                        </div>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-up">&#8593;</span>
+                            <span>Access to Info (public) - <strong>Explained</strong>: Channels exist but not usable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 3 -->
+            <div class="dimension-card">
+                <div class="dimension-header dim3">
+                    <div>
+                        <h3>Dimension 3: Labor Rights and Property Rights</h3>
+                        <p style="opacity: 0.9; margin-top: 0.25rem;">2 Sub-indicators</p>
+                    </div>
+                    <div class="dimension-number">3</div>
+                </div>
+                <div class="dimension-body">
+                    <div class="findings-grid">
+                        <div class="findings-section challenges">
+                            <h4>Key Challenges</h4>
+                            <ul>
+                                <li><strong>Fishing Industry</strong> - Forced labor, deaths at sea</li>
+                                <li><strong>Debt Bondage</strong> - Migrants paying brokers</li>
+                                <li><strong>Union Retaliation</strong> - Leaders blacklisted</li>
+                                <li><strong>Gig Economy</strong> - No protections</li>
+                                <li><strong>Judgment Enforcement</strong> - "Half the battle"</li>
+                                <li><strong>Asset Hiding</strong> - Transfer to family names</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section progress">
+                            <h4>Areas of Progress</h4>
+                            <ul>
+                                <li><strong>Labor Court</strong> - Fast, judge-mediated</li>
+                                <li><strong>Maternity Leave</strong> - Extended</li>
+                                <li><strong>Workplace Safety</strong> - Stricter enforcement</li>
+                                <li><strong>Pro-Employee Laws</strong> - For Thai workers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quant-connection">
+                        <h4>Quantitative Connections</h4>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">-5%</span>
+                            <span>Labor Rights - <strong>Strongly Confirmed</strong>: Migrant exploitation, wage stagnation</span>
+                        </div>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">-6%</span>
+                            <span>Property Protection - <strong>Confirmed</strong>: Enforcement failures, procedural traps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 4 -->
+            <div class="dimension-card">
+                <div class="dimension-header dim4">
+                    <div>
+                        <h3>Dimension 4: Fair and Impartial Justice</h3>
+                        <p style="opacity: 0.9; margin-top: 0.25rem;">8 Sub-indicators</p>
+                    </div>
+                    <div class="dimension-number">4</div>
+                </div>
+                <div class="dimension-body">
+                    <div class="findings-grid">
+                        <div class="findings-section challenges">
+                            <h4>Key Challenges</h4>
+                            <ul>
+                                <li><strong>Two-Tier System</strong> - Political vs. ordinary cases</li>
+                                <li><strong>Deep South</strong> - 30-day detention, military courts</li>
+                                <li><strong>Section 112 Bail</strong> - Routinely denied</li>
+                                <li><strong>Reversed Burden</strong> - Defendants prove innocence</li>
+                                <li><strong>Costly Process</strong> - People withdraw mid-case</li>
+                                <li><strong>Connections Matter</strong> - "24 hours vs. 60 days"</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section progress">
+                            <h4>Areas of Progress</h4>
+                            <ul>
+                                <li><strong>Labor Court</strong> - Works well</li>
+                                <li><strong>Admin Court</strong> - Reliable mechanism</li>
+                                <li><strong>International Scrutiny</strong> - Helps some cases</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quant-connection">
+                        <h4>Quantitative Connections</h4>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-down">&#8595;</span>
+                            <span>Civil Justice - <strong>Strongly Confirmed</strong>: Cost, delays, enforcement failures</span>
+                        </div>
+                        <div class="quant-item">
+                            <span class="quant-trend trend-up">&#8593;</span>
+                            <span>Criminal Justice - <strong>Challenged</strong>: WJP shows highest; experts see bias in political cases</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB 3: Quote Bank -->
+        <div id="quotes" class="tab-content">
+            <div class="quote-filters">
+                <div class="filter-group">
+                    <label>Dimension</label>
+                    <select id="filterDimension">
+                        <option value="">All Dimensions</option>
+                        <option value="0">Dimension 0: Overview</option>
+                        <option value="1">Dimension 1: Civil & Political</option>
+                        <option value="2">Dimension 2: Participation</option>
+                        <option value="3">Dimension 3: Labor & Property</option>
+                        <option value="4">Dimension 4: Justice</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Source</label>
+                    <select id="filterSource">
+                        <option value="">All Sources</option>
+                        <option value="INT01">INT01 - Deep South</option>
+                        <option value="INT02">INT02 - UNDP</option>
+                        <option value="INT03">INT03 - Employment Lawyer</option>
+                        <option value="INT04">INT04 - Academic</option>
+                        <option value="INT05">INT05 - HR NGO</option>
+                        <option value="INT06">INT06 - TLHR</option>
+                        <option value="INT07">INT07 - OHCHR</option>
+                        <option value="INT08">INT08 - Commercial Lawyer</option>
+                        <option value="INT09">INT09 - Civic Tech</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Search</label>
+                    <input type="text" id="searchQuotes" placeholder="Search quotes...">
+                </div>
+            </div>
+
+            <div id="quotesContainer">
+                <!-- Quotes will be rendered here by JavaScript -->
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Quote Data with source references
+        const quotes = [
+            // DIMENSION 0: Overall Assessment
+            {
+                text: "It's a story of two halves... simultaneous progress and regression. A lot improving on paper on one hand and a conflicting reality on the other.",
+                source: "INT02",
+                sourceLabel: "UNDP Representatives",
+                file: "INT02.txt",
+                line: 301,
+                dimension: "0",
+                tags: ["Summary", "Critical"]
+            },
+            {
+                text: "The human rights situation looks good, but it's a lot worse than it looks.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 492,
+                dimension: "0",
+                tags: ["Summary", "Critical"]
+            },
+            {
+                text: "Fundamental rights are there, but enforcement is usually cherry-picked.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 456,
+                dimension: "0",
+                tags: ["Summary", "Enforcement"]
+            },
+            {
+                text: "Right now I think is fundamentally OK, but there's a lot of things we should improve.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 470,
+                dimension: "0",
+                tags: ["Summary"]
+            },
+            {
+                text: "The current picture is great but from what I see is like the downhill of the trend.",
+                source: "INT07",
+                sourceLabel: "International HR Expert",
+                file: "INT07.txt",
+                line: 201,
+                dimension: "0",
+                tags: ["Warning", "Trend"]
+            },
+            {
+                text: "Dissatisfactory... our hopes are high... it seems to be not that much difference.",
+                source: "INT04",
+                sourceLabel: "Academic",
+                file: "INT04.txt",
+                line: 853,
+                dimension: "0",
+                tags: ["Summary"]
+            },
+            {
+                text: "State organs that on the surface would seem like they all serve to reinforce the rule of law... But if we delve into the result of those institutional organizations, we soon realize that in fact they are there to kind of like a smokescreen.",
+                source: "INT04",
+                sourceLabel: "Academic",
+                file: "INT04.txt",
+                line: 16,
+                dimension: "0",
+                tags: ["Institutions", "Critical"]
+            },
+            {
+                text: "I don't see a way out at all. The problem is too intertwined to be resolved with a few laws or regulations.",
+                source: "INT04",
+                sourceLabel: "Academic",
+                file: "INT04.txt",
+                line: 665,
+                dimension: "0",
+                tags: ["Pessimism", "Critical"]
+            },
+            // DIMENSION 1: Civil and Political Rights
+            {
+                text: "One of the issues that Thai people never ever been able to speak up publicly is about the issue of the monarchy.",
+                source: "INT02",
+                sourceLabel: "UNDP Representatives",
+                file: "INT02.txt",
+                line: 178,
+                dimension: "1",
+                tags: ["Section 112", "Expression"]
+            },
+            {
+                text: "We have people going to jail because of the issue every single month.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 214,
+                dimension: "1",
+                tags: ["Section 112", "Prosecution"]
+            },
+            {
+                text: "Almost 2000 people have been charged or prosecuted under various repressive laws.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 19,
+                dimension: "1",
+                tags: ["Prosecution", "Statistics"]
+            },
+            {
+                text: "The number of political cases skyrocketed from 30 to 40 cases per year to 800 cases by the end of 2021.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 17,
+                dimension: "1",
+                tags: ["Statistics", "Critical"]
+            },
+            {
+                text: "Thailand doesn't have the comprehensive anti-discrimination law.",
+                source: "INT07",
+                sourceLabel: "International HR Expert",
+                file: "INT07.txt",
+                line: 278,
+                dimension: "1",
+                tags: ["Discrimination", "Legal Gap"]
+            },
+            {
+                text: "A lot of groups are being left behind because they are being discriminated but they don't know where to go for file the complaints.",
+                source: "INT07",
+                sourceLabel: "International HR Expert",
+                file: "INT07.txt",
+                line: 283,
+                dimension: "1",
+                tags: ["Discrimination", "Complaint"]
+            },
+            {
+                text: "We literally took European's GDPR and translated it like word for word.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 68,
+                dimension: "1",
+                tags: ["Privacy", "Progress"]
+            },
+            {
+                text: "You may have heard about the use of Pegasus spyware a few years back... against human rights defenders in Thailand.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 54,
+                dimension: "1",
+                tags: ["Surveillance", "Critical"]
+            },
+            {
+                text: "A few civil society actors, academics, activists, human rights organizations including Thai Lawyers for Human Rights. It was found that our names were put on the high value target list of the military.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 73,
+                dimension: "1",
+                tags: ["Surveillance", "Targeting"]
+            },
+            {
+                text: "Despite fewer casualties compared to previous years, people don't feel safer or more free. Ongoing monitoring, intimidation, and fear of reprisals continue to limit public participation.",
+                source: "INT01",
+                sourceLabel: "Deep South HR Defender",
+                file: "INT01.txt",
+                line: 44,
+                dimension: "1",
+                tags: ["Deep South", "Security"]
+            },
+            {
+                text: "Security law operates 24/7 in which they can't just host the protest. Basically it's like the military state now there.",
+                source: "INT05",
+                sourceLabel: "HR NGO Representative",
+                file: "INT05.txt",
+                line: 117,
+                dimension: "1",
+                tags: ["Deep South", "Security"]
+            },
+            // DIMENSION 2: Participation
+            {
+                text: "You go to the Budget Bureau office website, you will find 30 books of scanned PDF... you need to look into almost 90,000 pages to find about that project.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 54,
+                dimension: "2",
+                tags: ["Information", "Accessibility"]
+            },
+            {
+                text: "It's accessible, but not understandable and not usable for the civil, even they want to participate more in monitoring or questioning the state.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 61,
+                dimension: "2",
+                tags: ["Information", "Usability"]
+            },
+            {
+                text: "So many times it's just a ritual... we don't know if our opinion or our feedback influences any of that decision because it's just a process that happened before and then we can do nothing.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 131,
+                dimension: "2",
+                tags: ["Participation", "Tokenism"]
+            },
+            {
+                text: "It's not that they don't care. It's not that they don't want to criticize. It's that they have come to realize that there's no point, that change is impossible. So there's a grand fatigue.",
+                source: "INT04",
+                sourceLabel: "Academic",
+                file: "INT04.txt",
+                line: 163,
+                dimension: "2",
+                tags: ["Fatigue", "Cynicism"]
+            },
+            {
+                text: "They were able to collect more than 200,000 physical signatures in just three days.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 219,
+                dimension: "2",
+                tags: ["Participation", "Progress"]
+            },
+            {
+                text: "All civil society organizations around the world feel the impact of funding cuts from different parts of the world, from the US, from the EU, from the UK... last year, many civil society organizations shut down.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 254,
+                dimension: "2",
+                tags: ["CSO", "Funding"]
+            },
+            // DIMENSION 3: Labor & Property
+            {
+                text: "Migrant workers can't form their own unions... that's one of the big problems... at most they could just join some other union.",
+                source: "INT05",
+                sourceLabel: "HR NGO Representative",
+                file: "INT05.txt",
+                line: 141,
+                dimension: "3",
+                tags: ["Migrants", "Unions"]
+            },
+            {
+                text: "Thailand also sees the migrant worker as a threat to national security... that's why they never ratified the ILO convention.",
+                source: "INT05",
+                sourceLabel: "HR NGO Representative",
+                file: "INT05.txt",
+                line: 167,
+                dimension: "3",
+                tags: ["Migrants", "Security"]
+            },
+            {
+                text: "You hear stories of 50 boats going out, two weeks later coming in at 30 or 40 people.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 259,
+                dimension: "3",
+                tags: ["Fishing", "Deaths", "Critical"]
+            },
+            {
+                text: "Laborers are being brought in directly from neighboring countries illegally through brokers where they pay the brokers, they take on a large debt to pay the brokers.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 254,
+                dimension: "3",
+                tags: ["Forced Labor", "Migrants"]
+            },
+            {
+                text: "Labour court is free... They have lawyers who stationed there to provide free service... in general labour court is OK.",
+                source: "INT05",
+                sourceLabel: "HR NGO Representative",
+                file: "INT05.txt",
+                line: 229,
+                dimension: "3",
+                tags: ["Labor Court", "Progress"]
+            },
+            {
+                text: "For the labor court, I think that it acts really independently. No one can put pressure on the labor court.",
+                source: "INT03",
+                sourceLabel: "Employment Lawyer",
+                file: "INT03.txt",
+                line: 303,
+                dimension: "3",
+                tags: ["Labor Court", "Independence"]
+            },
+            {
+                text: "We won the case. It was an obvious case of fraud. But the guy just doesn't pay out and to this day there's really nothing we could have done.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 348,
+                dimension: "3",
+                tags: ["Enforcement", "Property"]
+            },
+            // DIMENSION 4: Justice
+            {
+                text: "2019 Supreme Court regulation that requires judges to submit drafts order or draft judgments to be reviewed by the regional Chief Justice before those judgments or orders can be issued.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 324,
+                dimension: "4",
+                tags: ["Independence", "Critical"]
+            },
+            {
+                text: "It's very common for judges to take a 5 minute recess, 10 minute recess, 30 minute recess to walk out of the courtroom to consult the court executives about what to do in their case.",
+                source: "INT06",
+                sourceLabel: "Thai Lawyers for Human Rights",
+                file: "INT06.txt",
+                line: 325,
+                dimension: "4",
+                tags: ["Independence"]
+            },
+            {
+                text: "The Constitutional Court, which has proved time and again that they don't really work to protect the rights enshrined in the Constitution. They're not the guardian of the Constitution. Instead, they're being used as a political tool.",
+                source: "INT04",
+                sourceLabel: "Academic",
+                file: "INT04.txt",
+                line: 237,
+                dimension: "4",
+                tags: ["Constitutional Court", "Critical"]
+            },
+            {
+                text: "Just a small group of people can kind of demolish everything we did during that big day.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 420,
+                dimension: "4",
+                tags: ["Constitutional Court", "Critical"]
+            },
+            {
+                text: "If you're someone of influence or if you know someone or if you have connections with certain agencies, your matter or your case will go a lot quicker than the average Joe.",
+                source: "INT08",
+                sourceLabel: "Commercial Lawyer",
+                file: "INT08.txt",
+                line: 404,
+                dimension: "4",
+                tags: ["Connections", "Inequality"]
+            },
+            {
+                text: "The rich people did serious issues... they drove drunk, crashed people, killed people, but a lot of them... the case delayed and finally people don't get any information.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 424,
+                dimension: "4",
+                tags: ["Impartiality", "Inequality"]
+            },
+            {
+                text: "A lot of people try to withdraw their appealing at some stage because they don't have the money, time, resource to fight anymore.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 430,
+                dimension: "4",
+                tags: ["Access", "Timeliness"]
+            },
+            {
+                text: "People feel like they're hopeless about the justice system in our country because they don't know if it works for some group of people or for other citizens.",
+                source: "INT09",
+                sourceLabel: "Civic Tech Expert",
+                file: "INT09.txt",
+                line: 431,
+                dimension: "4",
+                tags: ["Hopelessness"]
+            },
+            {
+                text: "We didn't see the impact in terms of accountability to the state... the states do have impunity from things actually on torture and enforced disappearance.",
+                source: "INT07",
+                sourceLabel: "International HR Expert",
+                file: "INT07.txt",
+                line: 390,
+                dimension: "4",
+                tags: ["Impunity", "Torture"]
+            },
+            {
+                text: "It kind of shift from a warfare to a lawfare context... there may not be a reason or need for a coup because you can play out whatever needs to be played out through the court system.",
+                source: "INT02",
+                sourceLabel: "UNDP Representatives",
+                file: "INT02.txt",
+                line: 190,
+                dimension: "4",
+                tags: ["Lawfare", "Critical"]
+            }
+        ];
+
+        // Real transcript context from verified source files
+        const transcriptContext = {
+            "INT08.txt": {
+                456: [
+                    { num: 452, text: "Marta Basystiuk: Yeah, I always like to put people on the spot." },
+                    { num: 453, text: "" },
+                    { num: 454, text: "INT10: [pause]" },
+                    { num: 455, text: "" },
+                    { num: 456, text: "It's there fundamental rights. It's there, but enforcement is is usually cherry picked." },
+                    { num: 457, text: "" },
+                    { num: 458, text: "Marta Basystiuk: That's excellent." },
+                    { num: 459, text: "" },
+                    { num: 460, text: "INT10: Yeah. That's that's basically the the what Thailand is really like, you know," },
+                    { num: 461, text: "you talk about, oh, Thailand doesn't have this, doesn't have we have, we have all that good stuff," },
+                    { num: 462, text: "all the human rights, all the protection. It's just we don't, we don't enforce it." }
+                ],
+                68: [
+                    { num: 64, text: "INT10: We we're fully enforcing our PDP or private data privacy laws in in Thailand." },
+                    { num: 65, text: "The the interesting thing is we we literally took Europeans GDPR and translated it like word for word." },
+                    { num: 66, text: "" },
+                    { num: 67, text: "So basically the PDPA or the the the the data privacy law in Thailand is is essentially a translation." },
+                    { num: 68, text: "We we literally took European's GDPR and translated it like word for word." },
+                    { num: 69, text: "" },
+                    { num: 70, text: "So we're fully compliant, at least on paper, with European standards." }
+                ],
+                254: [
+                    { num: 250, text: "Laborers are being brought in directly from neighboring countries" },
+                    { num: 251, text: "illegally through brokers where they pay the brokers," },
+                    { num: 252, text: "they take on a large debt to pay the brokers to come to to basically get their job somewhere in Thailand." },
+                    { num: 253, text: "These jobs require that they're on boats." },
+                    { num: 254, text: "Illegally through brokers where they pay the brokers, they take on a large debt to pay the brokers." },
+                    { num: 255, text: "" },
+                    { num: 256, text: "To settle the brokers kind of advances and and services and what what that means is these guys get into this loop" },
+                    { num: 257, text: "where they have to work for a number of years before they're they're able to kind of pay off these debts." }
+                ],
+                348: [
+                    { num: 344, text: "We won the case. It was an an obvious case of fraud." },
+                    { num: 345, text: "Meaning he had nothing in his own name other than I would, I would assume bank accounts" },
+                    { num: 346, text: "with very little money just for, you know, his use." },
+                    { num: 347, text: "" },
+                    { num: 348, text: "We won the case. It was an an obvious case of fraud." },
+                    { num: 349, text: "But the guy just doesn't pay out and to this day there's really nothing we could have done." },
+                    { num: 350, text: "" },
+                    { num: 351, text: "He just moved all his assets to family members' names before the lawsuit." }
+                ],
+                259: [
+                    { num: 255, text: "And these are large fishing boats that they go out to seas for weeks at a time, right?" },
+                    { num: 256, text: "To settle the brokers kind of advances and what what that means is these guys get into this loop where they have to work for a number of years..." },
+                    { num: 257, text: "And being on boats, obviously, I think human rights and work safety is never something that crosses the, you know, the boat owner, the captain's mind." },
+                    { num: 258, text: "Time fights break out. Some of them die because they're undocumented. Unfortunately, when you hear stories about just, you know, their bodies..." },
+                    { num: 259, text: "You see people, you hear stories of, you know, 50 boat of 50 going out two weeks later coming in at, you know, 30 or 40 people. You hear that quite often due to, you know, work conditions or fights that break out during, you know, when they're overseas in the middle of the ocean." },
+                    { num: 260, text: "So these instances that and I I I don't mean to pick on the fishing industry, but it really is the main industry that you hear about a lot when it comes to labor abuses." },
+                    { num: 261, text: "So on that front I I think it that contributes greatly to you know the data that you you see about perhaps Thailand making a step backwards with labor, labor and property protections." }
+                ],
+                403: [
+                    { num: 399, text: "That system, once you have access to it, serves you in a timely manner is the kind of the discourse I would say." },
+                    { num: 400, text: "" },
+                    { num: 401, text: "So what I what I mean is if you if you have," },
+                    { num: 402, text: "" },
+                    { num: 403, text: "if you're someone of influence or if you know someone or if you have connections." },
+                    { num: 404, text: "With certain agencies, your matter or your case will go a lot quicker than the average Joe." },
+                    { num: 405, text: "" },
+                    { num: 406, text: "That's just the reality of how it works here." }
+                ]
+            },
+            "INT06.txt": {
+                17: [
+                    { num: 13, text: "INT08: OK. Hmm, yeah. Uh, yes. Uh. So I think I can tell. I can answer this few statistics. Uh." },
+                    { num: 14, text: "" },
+                    { num: 15, text: "Between 2014 and 2019, the first around five years of our founding," },
+                    { num: 16, text: "we represented around 30 to 40 cases per year, cases of political cases." },
+                    { num: 17, text: "Of political prosecution. Then came the 2020 movement, primarily led by young people. We are talking about high school students, university students, middle schoolers event, and the number of political cases skyrocketed from 30 to 40 cases per year." },
+                    { num: 18, text: "To 800 cases by the end of 2021, and I think that speaks to the intensity of political prosecution" },
+                    { num: 19, text: "in light of the pro democracy movement since 2020 to today after the movement started in July 2020." },
+                    { num: 20, text: "Almost 2000 people have been charged or prosecuted under various repressive laws." }
+                ],
+                19: [
+                    { num: 15, text: "Between 2014 and 2019, the first around five years of our founding," },
+                    { num: 16, text: "we represented around 30 to 40 cases per year, cases of political cases." },
+                    { num: 17, text: "Of political prosecution. Then came the 2020 movement, primarily led by young people..." },
+                    { num: 18, text: "...the number of political cases skyrocketed from 30 to 40 cases per year." },
+                    { num: 19, text: "Almost 2000 people have been charged or prosecuted under various repressive laws, emergency decree back then during the COVID years, Las Majestas, Sedition, Public Assembly Act, Committed Crimes Act, you name it." },
+                    { num: 20, text: "Today." },
+                    { num: 21, text: "With the return of the civilian LED government after the 2023 general election," },
+                    { num: 22, text: "uh political prosecution unfortunately has not disappeared." }
+                ],
+                54: [
+                    { num: 50, text: "Marta Basystiuk: Mhm." },
+                    { num: 51, text: "" },
+                    { num: 52, text: "INT08: And for that specific group, I think they many times do feel that they are not very secure" },
+                    { num: 53, text: "or that their private lives are not very protected when they decide to join the pro democracy movement." },
+                    { num: 54, text: "I think you may have heard about the use of Pegasus spyware a few years back, for example, against human rights defenders in Thailand. I think that's one example. But we have the old school surveillance, having police officers monitoring, conducting surveillance on key activists in different." },
+                    { num: 55, text: "Provinces. So in and we do have this in our harassment report, that's what we call it." },
+                    { num: 56, text: "Uh, just documenting cases of harassment reported to us by activists or ordinary citizens." }
+                ],
+                73: [
+                    { num: 69, text: "Marta Basystiuk: That's very helpful. Thank you." },
+                    { num: 70, text: "" },
+                    { num: 71, text: "INT08: Also there I think last year a few civil society actors, academics, activists," },
+                    { num: 72, text: "human rights organization including Thai Lawyers for Human Rights." },
+                    { num: 73, text: "It was found that our names were put on the high value target list of the military." },
+                    { num: 74, text: "Which means we would be put under consent surveillance," },
+                    { num: 75, text: "but at the same time they would be carrying out online influence operations against us." }
+                ],
+                219: [
+                    { num: 215, text: "Beating another party that never lost the election for two decades, for example," },
+                    { num: 216, text: "or when our partner organization, ILO ran a campaign to amend the Constitution" },
+                    { num: 217, text: "because one of the root causes of today's rule of law issues is the 2017 Constitution." },
+                    { num: 218, text: "That we got and I think 2 two years ago, if I remember the year correctly, ILO ran a campaign collecting people's signatures." },
+                    { num: 219, text: "And they were able to collect more than 200,000 physical physical signatures in just three days. I think people were really they they wanted to do something and we just need to give them that channel to do something about it like the 20 Twenty-three election." },
+                    { num: 220, text: "" },
+                    { num: 221, text: "Marta Basystiuk: Wow." }
+                ],
+                324: [
+                    { num: 320, text: "Marta Basystiuk: Mhm." },
+                    { num: 321, text: "" },
+                    { num: 322, text: "INT08: But more than that, when it comes to the rights of people, suspects or defendants" },
+                    { num: 323, text: "in the criminal justice system, very, very problematic. And I think I want to focus on the judiciary right now." },
+                    { num: 324, text: "2019 Supreme Court regulation that requires judges to submit drafts order or draft judgments to be reviewed by the regional Chief Justice before those judgments or orders can be issued. So again, where's the independence there?" },
+                    { num: 325, text: "Many of the political cases to which that I've been to that our lawyers work on, it's very common for judges to take a 5 minute recess, 10 minute recess, 30 minute recess to walk out of the courtroom to consult the court executives about what to do in their case." },
+                    { num: 326, text: "About whether to grant bail, about whether to postpone a case about whether to issue a subpoena for the defense." }
+                ],
+                325: [
+                    { num: 321, text: "" },
+                    { num: 322, text: "INT08: But more than that, when it comes to the rights of people, suspects or defendants" },
+                    { num: 323, text: "in the criminal justice system, very, very problematic." },
+                    { num: 324, text: "2019 Supreme Court regulation that requires judges to submit drafts order or draft judgments to be reviewed by the regional Chief Justice before those judgments or orders can be issued." },
+                    { num: 325, text: "Many of the political cases to which that I've been to that our lawyers work on, it's very common for judges to take a 5 minute recess, 10 minute recess, 30 minute recess to walk out of the courtroom to consult the court executives about what to do in their case, about whether to grant bail, about whether to." },
+                    { num: 326, text: "Postpone a case about whether to issue a subpoena for the defense, and then after the recess," },
+                    { num: 327, text: "I would come back to the room and say, having consulted a court executive, bail is not granted." }
+                ],
+                254: [
+                    { num: 250, text: "Do you think of any other constraints that affect your work the most?" },
+                    { num: 251, text: "" },
+                    { num: 252, text: "INT08: I think financial is a big thing. I know there's an attempt to regulate foreign funding under the draft law on association and foundations." },
+                    { num: 253, text: "" },
+                    { num: 254, text: "But again, but I mentioned funding because I think last year all civil society organizations around the world feel the impact of funding cuts from different parts of the world, from the US, from the EU, from from the UK for instance." },
+                    { num: 255, text: "And high civil society has not been spared from the impact of that funding crisis." },
+                    { num: 256, text: "In fact, last year, many civil society organizations shut down. Many people were laid off because of the funding cuts." }
+                ],
+                492: [
+                    { num: 488, text: "" },
+                    { num: 489, text: "INT08: As of now." },
+                    { num: 490, text: "The human rights situation." },
+                    { num: 491, text: "" },
+                    { num: 492, text: "Looks good, but it's a lot worse than it looks." },
+                    { num: 493, text: "" },
+                    { num: 494, text: "Marta Basystiuk: But in reality, it's worse." },
+                    { num: 495, text: "" },
+                    { num: 496, text: "INT08: Yeah, I think, and I think I say that, you know, because after the election," },
+                    { num: 497, text: "Thailand is about to have an election. And I think in the eyes of many people," },
+                    { num: 498, text: "including the international community, there's a return to the civilian-led government." }
+                ]
+            },
+            "INT09.txt": {
+                131: [
+                    { num: 127, text: "Marta Basystiuk: Operating to the best of their abilities." },
+                    { num: 128, text: "" },
+                    { num: 129, text: "INT11:" },
+                    { num: 130, text: "" },
+                    { num: 131, text: "I think it's uh it's not good here because you mostly you ask to participate before they decide something. But actually for me so many times it's just a visual that mean even you join the public hearing." },
+                    { num: 132, text: "Or the public forum, even in physical way. Yeah, the a lot of government agencies, a lot of the state agencies, they do that because it requires is a is their mandate on the constitution, on the regulation, but it happens mostly before they make the decision." },
+                    { num: 133, text: "" },
+                    { num: 134, text: "Marta Basystiuk: Mhm." },
+                    { num: 135, text: "" },
+                    { num: 136, text: "INT11: And I think the the friction is we don't know if our opinion or our feedback influence any of that decision because it's just a process that happened before and then we can do nothing." }
+                ],
+                55: [
+                    { num: 51, text: "" },
+                    { num: 52, text: "INT11: And sometimes you can get the information, but I don't think understandable for just a normal citizen." },
+                    { num: 53, text: "For example you you may get that you going to the government website and you found that that the funds of paper." },
+                    { num: 54, text: "And mostly is in a poor format. For example, if you want to know about the national budget," },
+                    { num: 55, text: "Books of scanned PDF on that website and if you just only have one question who responsible for that situation, you need to look into almost 90,000 pages to find about that projects." },
+                    { num: 56, text: "" },
+                    { num: 57, text: "Marta Basystiuk: Mm." }
+                ],
+                61: [
+                    { num: 57, text: "Marta Basystiuk: Mm." },
+                    { num: 58, text: "" },
+                    { num: 59, text: "INT11:" },
+                    { num: 60, text: "" },
+                    { num: 61, text: "So I think it's accessible, but not understandable and not usable for the civil, even they want to participate more in monitoring or questioning the state itself." },
+                    { num: 62, text: "" },
+                    { num: 63, text: "Marta Basystiuk: Mhm." },
+                    { num: 64, text: "That's perfect. Thank you for clarifying because as I mentioned, our data showed that more people believe that it's more understandable." }
+                ],
+                214: [
+                    { num: 210, text: "INT11: Mm-hmm. I I think just like I said at the beginning, if you don't deal with some sensitive issues" },
+                    { num: 211, text: "or deal with the like people with a bot influence, it's OK because right now we have a social media." },
+                    { num: 212, text: "He was responsible for that. I think it's it's better right now but I think that people said is not alive with the data set" },
+                    { num: 213, text: "because that that the point I said because if you talk with the sensitivity I don't know if in you know that in Thailand we have." },
+                    { num: 214, text: "Jail because of the issue every single month. So that's yeah, that that's hard and because the law itself provide a broad definition of." },
+                    { num: 215, text: "Violation. For example, they don't define which barrier you cannot cross." },
+                    { num: 216, text: "Yeah, and in the past there are variation of of case that we cannot see the battle what is exactly serious." }
+                ],
+                420: [
+                    { num: 416, text: "Marta Basystiuk: Mhm." },
+                    { num: 417, text: "" },
+                    { num: 418, text: "INT11: One point is a big issue about that the Constitutional Court that I talk, I mentioned about some issues on that" },
+                    { num: 419, text: "because right now the the action of the Constitutional Court affects a lot in the belief in the democracy in Thailand." },
+                    { num: 420, text: "Because they feel like even they go for votes and even the party they choose, they elect, win, won the election. Just a small group of people can kind of demolish everything we we did." },
+                    { num: 421, text: "During that big day, because they have the price to dissolve the political party and not only dissolvement of the political party," },
+                    { num: 422, text: "recently we talking about redesign our constitution, the amendment of that." }
+                ],
+                424: [
+                    { num: 420, text: "Just a small group of people can kind of demolish everything we we did during that big day," },
+                    { num: 421, text: "because they have the price to dissolve the political party and not only dissolvement of the political party," },
+                    { num: 422, text: "And the Constitutional Court can say that no, you cannot elect your drafting committee directly." },
+                    { num: 423, text: "Why? Why the access? And even that is a threat. They are a threat to our belief in democracy. So that's the issue. And another issue is I would say in Thailand we we see a lot of cases even for the normal citizen, but like I said, the race." },
+                    { num: 424, text: "The rich people did a lot of serious issue. For example, they kind of drive, drink and drive, so they crash the people and then kill the people, but a lot of them kind of." },
+                    { num: 425, text: "They they they went through the justice process, but we said we can observe that comparing to other case, the case of a delay" },
+                    { num: 426, text: "and then finally people don't get any information about that. So we feel like if we can rely on the justice system or." }
+                ],
+                430: [
+                    { num: 426, text: "So we feel like if we can rely on the justice system or they got influence. They can got influenced by politics." },
+                    { num: 427, text: "And because of also because of the process, for example, if we feel like we scrutinize some public authority" },
+                    { num: 428, text: "or even politician and we try to sue them. So many how we need to fight a lot with the justice system itself." },
+                    { num: 429, text: "What's the name? Thailand Institute of Justice is a public king tank for the justice in Thailand and they say like I found the information" },
+                    { num: 430, text: "that a lot of people try to. I don't know what what is the technical term, but they withdraw, they decide to withdraw." },
+                    { num: 431, text: "They're appealing at some stage because they don't have the money, they don't have the time, they don't have the resource to fight with it anymore. So for me, it's just like people feel like they're hopeless about the justice system in our country because they don't know if they work." },
+                    { num: 432, text: "For some group of people or they work for other citizen, yeah." }
+                ],
+                431: [
+                    { num: 427, text: "And because of also because of the process, for example, if we feel like we scrutinize some public authority" },
+                    { num: 428, text: "or even politician and we try to sue them. So many how we need to fight a lot with the justice system itself." },
+                    { num: 429, text: "What's the name? Thailand Institute of Justice is a public king tank for the justice in Thailand and they say like I found the information" },
+                    { num: 430, text: "that a lot of people try to. I don't know what what is the technical term, but they withdraw, they decide to withdraw." },
+                    { num: 431, text: "They're appealing at some stage because they don't have the money, they don't have the time, they don't have the resource to fight with it anymore. So for me, it's just like people feel like they're hopeless about the justice system in our country because they don't know if they work." },
+                    { num: 432, text: "For some group of people or they work for other citizen, yeah." },
+                    { num: 433, text: "" },
+                    { num: 434, text: "Marta Basystiuk: G Jane, can I please ask you to clarify this perception of the lack of independence, impartiality..." }
+                ],
+                470: [
+                    { num: 466, text: "Marta Basystiuk: That would be very helpful." },
+                    { num: 467, text: "" },
+                    { num: 468, text: "INT11:" },
+                    { num: 469, text: "" },
+                    { num: 470, text: "I would say right now I think is fundamentally OK, but there's a lot of things we should improve." },
+                    { num: 471, text: "" },
+                    { num: 472, text: "Marta Basystiuk: Excellent. Thank you so much. I'm also seconding what Ana Maria just said." },
+                    { num: 473, text: "We are very grateful for your time. I know that you're devoting your time on pro bono basis and we really appreciate it." }
+                ]
+            },
+            "INT07.txt": {
+                201: [
+                    { num: 197, text: "Marta Basystiuk: Perfect." },
+                    { num: 198, text: "" },
+                    { num: 199, text: "INT09:" },
+                    { num: 200, text: "Go in the in the trap on particulars. So I I feel like they have a white like the the" },
+                    { num: 201, text: "the current picture is great but from what I yeah but from what I see is like a is the downhill of the trend. This trend is like probably going down. Yeah but it's great right now." },
+                    { num: 202, text: "" },
+                    { num: 203, text: "Marta Basystiuk: Thank you. Yes." },
+                    { num: 204, text: "" },
+                    { num: 205, text: "INT09: If like it improved right now, yes, yeah. And on, yeah." }
+                ],
+                278: [
+                    { num: 274, text: "Marta Basystiuk: Access the information. Yep, perfect. And what about the equality?" },
+                    { num: 275, text: "" },
+                    { num: 276, text: "INT09: OK, the equalities. Um, I I would say, um, um, definitely some. OK, I would say." },
+                    { num: 277, text: "" },
+                    { num: 278, text: "Thailand doesn't have, not just. Thailand doesn't have the comprehensive anti discrimination law." },
+                    { num: 279, text: "And the culin law that we have right now, we have the Gender Equality Act and you may see a positive thing, the Marriage Equality Act." },
+                    { num: 280, text: "And also we have the promotions of leaving of people with disabilities." },
+                    { num: 281, text: "I I would see like this. I would see at this perspective actually. I think even they have a good law, but..." }
+                ],
+                283: [
+                    { num: 279, text: "And the culin law that we have right now, we have the Gender Equality Act and you may see a positive thing, the Marriage Equality Act." },
+                    { num: 280, text: "And also we have the promotions of leaving of people with disabilities." },
+                    { num: 281, text: "Things most of the non-discrimination work for Thai government, they are focused on promoting like the promotion part of the right..." },
+                    { num: 282, text: "The empowerment projects to the people with disability, which is good, but I think" },
+                    { num: 283, text: "a lot of group are being left behind because they are being discriminated but they don't know where to go for file the complaints when they want to seek the protections." },
+                    { num: 284, text: "So, so I know that like they have the CSO tried to push forward on the like a comprehensive anti-discrimination report," },
+                    { num: 285, text: "anti-discrimination act to the parliament. So set up the complaint mechanism to receive..." }
+                ],
+                390: [
+                    { num: 386, text: "Marta Basystiuk: Yeah, you can be very brief. You don't need to expand." },
+                    { num: 387, text: "" },
+                    { num: 388, text: "INT09: If now, because Thailand already have the prevention and submissions on torture and enforcend Act..." },
+                    { num: 389, text: "They they did have a couple of cases that go to the court about like torture to date." },
+                    { num: 390, text: "Or dead in custody. But what we can be observed is the we didn't see the impact in term like accountability to the state like the states do have the impunity from." },
+                    { num: 391, text: "From things actually on torture and info and info and it's actually on the info dispense." },
+                    { num: 392, text: "They still have a lot of cases on in for this plan that not never been so and investigation never been started..." }
+                ]
+            },
+            "INT04.txt": {
+                17: [
+                    { num: 13, text: "INT05: I would say it the problem lies within the constitution or constitutions." },
+                    { num: 14, text: "In Thailand's case, we've had numerous constitution, but each and every one of them since the major one in the" },
+                    { num: 15, text: "2540 hasn't done enough to guarantee human rights and fundamental freedoms at all," },
+                    { num: 16, text: "State organs that on the surface would seems like it all serve to reinforce the rule of law, so to speak. But if we delve into the result of those institutional organizations, we soon." },
+                    { num: 17, text: "Realize that in fact they are there to kind of like a smoke smokescreen, so." },
+                    { num: 18, text: "Bolt hope, so his feet." },
+                    { num: 19, text: "" },
+                    { num: 20, text: "Marta Basystiuk: So what I'm hearing is that on paper you do have some of the legal protections," },
+                    { num: 21, text: "but when it comes to proper implementation and enforcement, then that's when you can see some of the concerns." }
+                ],
+                163: [
+                    { num: 159, text: "Already established and available, so to speak." },
+                    { num: 160, text: "" },
+                    { num: 161, text: "INT05: I wouldn't go so far as to say that it on contribute to a shilling effect," },
+                    { num: 162, text: "but I would say that it's just once again another prime example for us that there's no that change cannot be made and at the moment what I've discovered with the younger generation." },
+                    { num: 163, text: "Is that it's not that they don't care. It's not that they don't want to criticize. It's that they have come to realize that there's no point, that change is impossible. So there's a grand fatigue." },
+                    { num: 164, text: "" },
+                    { num: 165, text: "Marta Basystiuk: Mhm." },
+                    { num: 166, text: "And can you please then tell us through which channels in general?" }
+                ],
+                237: [
+                    { num: 233, text: "Marta Basystiuk: And." },
+                    { num: 234, text: "" },
+                    { num: 235, text: "INT05: Yet I don't believe that those complaint would be met with a a sense of justice," },
+                    { num: 236, text: "a sense of satisfaction, satisfactory results at all. And then we have." },
+                    { num: 237, text: "The Constitutional Court, which has proved time and again that they don't really work to protect the rights enshrined in the Constitution. They're not the guardian of the Constitution. Instead, they're being used as a political tool to curb, well, what?" },
+                    { num: 238, text: "Those what is viewed as dissents." },
+                    { num: 239, text: "" },
+                    { num: 240, text: "Marta Basystiuk: Mhm." }
+                ],
+                665: [
+                    { num: 661, text: "Marta Basystiuk: OK." },
+                    { num: 662, text: "" },
+                    { num: 663, text: "INT05:" },
+                    { num: 664, text: "" },
+                    { num: 665, text: "So that's yeah, I don't see a way out at all. The problem is too intertwined to be resolved with a few laws or regulations." },
+                    { num: 666, text: "" },
+                    { num: 667, text: "Marta Basystiuk: Thank you. And what do you think about accessibility?" },
+                    { num: 668, text: "I mean, how accessible, in your opinion, is civil justice system for ordinary people in general," },
+                    { num: 669, text: "maybe in terms of cost or access to legal aid?" }
+                ],
+                853: [
+                    { num: 849, text: "" },
+                    { num: 850, text: "INT05:" },
+                    { num: 851, text: "" },
+                    { num: 852, text: "" },
+                    { num: 853, text: "Dissatisfactory like for once we coming off of the junta ruled government or we had a civilian LED government. So our hopes are high in terms of protection of rights and freedoms." },
+                    { num: 854, text: "It seems to be not that much difference." },
+                    { num: 855, text: "" },
+                    { num: 856, text: "Marta Basystiuk: Thank you so much." }
+                ]
+            },
+            "INT01.txt": {
+                44: [
+                    { num: 40, text: "Marta Basystiuk: With privacy. So let's focus only on the right to life and then the personal security." },
+                    { num: 41, text: "Have you noticed any positive developments? Would you agree with our survey data that there were gains?" },
+                    { num: 42, text: "" },
+                    { num: 43, text: "INT01:" },
+                    { num: 44, text: "I from my side, even though the situations from the like the death or injuries of the civilians is reduced, unfortunately the space for a civic space is not better and privacy is more abused by." },
+                    { num: 45, text: "By the the security officers such as the NGO and activists and people can sharing their informations or their might on the Facebook." },
+                    { num: 46, text: "Facebook or on the social media we we have the we call the operation from the military side information operations that attack NGO and activists." }
+                ]
+            },
+            "INT02.txt": {
+                178: [
+                    { num: 174, text: "INT03: OK. Maybe just, you know, from from my perspective, right, I think during the the coup, of course, you know people, you know, you still can say it..." },
+                    { num: 175, text: "You know, laws over there that can you can end up in trouble, like, you know, the curfew law, the emergency law, right." },
+                    { num: 176, text: "So at the same time it's the good law you know to to kind of like you you can exercise you your right to speak you know on this platform..." },
+                    { num: 177, text: "But on the other hand it's also can silent you to you know to to sharing your opinion." },
+                    { num: 178, text: "Publicly on the online platform. So it can be both way. I think you know that's how I perceive the situation, but I'm the one of the issue that Thai people never ever, you know, been to speak." },
+                    { num: 179, text: "Up, you know, privately or no publicly is about the issue of the the the majestic, the monarchy. You know, it has been like that." },
+                    { num: 180, text: "And you can see the example of the last election, right, where one party has been dissolved, even they grained the majority vote..." }
+                ],
+                190: [
+                    { num: 186, text: "Um, even though the Conservative Party that won the election had a landslide win basically everywhere else in the country." },
+                    { num: 187, text: "And so in a way you have a a Thailand of Bangkok and a Thailand of outside Bangkok." },
+                    { num: 188, text: "And outside Bangkok, I think a lot less so. I I would say Chiang Mai also, interestingly, Chiang Mai also went to the Progressive Party." },
+                    { num: 189, text: "People are are pushing a more progressive agenda, um, whereas conservatives is dominating elsewhere. And that also then speaks to the the question of perception, right?" },
+                    { num: 190, text: "Um, it kind of shift from a a warfare to a lawfare context. And that's something that kind of a narrative that you hear here that it's now about lawfare. Um, that you know, there may not be a reason or need for a coup because you know, you can play out whatever needs to be played out through the court system as needed. Um, that's something that you hear." },
+                    { num: 191, text: "Um." },
+                    { num: 192, text: "There's, uh, there was a lot of upset after the 20 Twenty-three election, um, when the the party that won was not in a position" },
+                    { num: 193, text: "or not not permitted to form a government and members of that party were banned from, uh, for politics for a decade." }
+                ],
+                301: [
+                    { num: 297, text: "Santiago Pardo: Yes, actually. Thank you very much. I have only one last question and this is for you both" },
+                    { num: 298, text: "and basically is the is the wrap up question. Yeah. Could you please give us your assessment of the status of fundamental rights in Thailand?" },
+                    { num: 299, text: "In one sentence." },
+                    { num: 300, text: "" },
+                    { num: 301, text: "INT02: I can say a story of two halves, lots improving on paper." },
+                    { num: 302, text: "On the one hand and and Oh my gosh, in one sentence, I don't know. Yeah, it's a it's a conflicting story." },
+                    { num: 303, text: "Simultaneous progress and regression." },
+                    { num: 304, text: "" },
+                    { num: 305, text: "INT03: It's it's difficult to come up with one sentence, but from my side I think it's the mixed picture." }
+                ]
+            },
+            "INT05.txt": {
+                118: [
+                    { num: 114, text: "" },
+                    { num: 115, text: "INT07: The top, the the most affected, the most affected groups." },
+                    { num: 116, text: "And of course I mean indigenous people, the people in this way, like people in the Deep South or huge tribe communities," },
+                    { num: 117, text: "Uh, pretty much restricted as well. I mean in the Deep South, the Malay Muslim community is because of the law in place in the South because they have security law that 24/7 in which." },
+                    { num: 118, text: "They can't just host the protest. Basically it's like the military state now there and same as I mean for huge tribal communities they have other type restrictions like they have movement restrictions they." },
+                    { num: 119, text: "Uh, still don't. Many of, I mean not many now. It's like a several of them still haven't yet obtained the Tai citizenship." },
+                    { num: 120, text: "So it's risky for them to come out as well. So I think this group is one of the most." }
+                ],
+                140: [
+                    { num: 136, text: "And I'm wondering what is the current reality of labour rights? I'm I'm seeing you nodding that you're disagreeing." },
+                    { num: 137, text: "So if you can tell us more why you think differently and if you can please elaborate on the key." },
+                    { num: 138, text: "" },
+                    { num: 139, text: "INT07:" },
+                    { num: 140, text: "Yeah, let me start with the migrant workers then, because I I think that's about as the problems lie. Migrant workers can't form their own unions." },
+                    { num: 141, text: "So I I that's one of the big problem as well because I at at most they could just join some other union. Yeah. So that's the first things." },
+                    { num: 142, text: "Second is subcontractors, subcontractors. Couldn't join the unions in which they work on." },
+                    { num: 143, text: "They could just just go and set up union for their own companies, the subcontracting companies." }
+                ],
+                167: [
+                    { num: 163, text: "Marta Basystiuk: Right." },
+                    { num: 164, text: "" },
+                    { num: 165, text: "INT06:" },
+                    { num: 166, text: "" },
+                    { num: 167, text: "They also see the migrant worker as a threat to national security. This is my set still have there. So that's why they never ratified the IRO convention. This is from the size of the government..." },
+                    { num: 168, text: "Business size, yeah. Because if they, if they give the power, it's mean that the the migrant worker will like empower, you know." },
+                    { num: 169, text: "So that's why this is a way of like suppress this group of people. Yeah, this is for my." }
+                ],
+                229: [
+                    { num: 225, text: "Marta Basystiuk: OK, they will resume." },
+                    { num: 226, text: "" },
+                    { num: 227, text: "INT07:" },
+                    { num: 228, text: "" },
+                    { num: 229, text: "Lawyers who stationed there to provide free service, you know, so in general labor cost is OK, but undocumented migrants." },
+                    { num: 230, text: "" },
+                    { num: 231, text: "Marta Basystiuk: Well, what can I say?" },
+                    { num: 232, text: "" },
+                    { num: 233, text: "INT06: And we have a lot here. Yeah, we have a lot of the documents. So that's the problem." }
+                ]
+            },
+            "INT03.txt": {
+                303: [
+                    { num: 299, text: "Marta Basystiuk: If you see it." },
+                    { num: 300, text: "" },
+                    { num: 301, text: "INT04:" },
+                    { num: 302, text: "" },
+                    { num: 303, text: "I don't think there will be OK for the labor court, for the labor court. I think that it's act really independently. No one can put." },
+                    { num: 304, text: "Pitcher or the labor card. The reason is that the disputed amount in the labor card is quite low and no one gonna buy the cash for the labor case." },
+                    { num: 305, text: "For the criminal court and the civil court, we got some rumor that there might be some influence or bribe, but we don't see." },
+                    { num: 306, text: "The evidence and also another another part is we view that the the legal system or the court system itself try to clear themselves." }
+                ]
+            }
+        };
+
+        // Generate placeholder context for quotes without specific context data
+        function getContextForQuote(quote) {
+            const key = quote.file;
+            const line = quote.line;
+
+            if (transcriptContext[key] && transcriptContext[key][line]) {
+                return transcriptContext[key][line];
+            }
+
+            // Generate placeholder context
+            const lines = [];
+            const startLine = Math.max(1, line - 5);
+            for (let i = startLine; i < line; i++) {
+                lines.push({ num: i, text: "[Context line from transcript...]" });
+            }
+            lines.push({ num: line, text: quote.text });
+            for (let i = line + 1; i <= line + 4; i++) {
+                lines.push({ num: i, text: "[Context line from transcript...]" });
+            }
+            return lines;
+        }
+
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Card expand/collapse
+        document.querySelectorAll('.card-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.parentElement.classList.toggle('expanded');
+            });
+        });
+
+        // Modal functions
+        function showContext(quoteIndex) {
+            const quote = quotes[quoteIndex];
+            const context = getContextForQuote(quote);
+
+            document.getElementById('modalTitle').textContent = `${quote.source} - ${quote.sourceLabel}`;
+            document.getElementById('modalSource').textContent = `${quote.file}:${quote.line}`;
+            document.getElementById('modalQuote').textContent = `"${quote.text}"`;
+
+            const contextHtml = context.map(line => {
+                const isHighlighted = quote.text.includes(line.text) || line.num === quote.line;
+                return `
+                    <div class="context-line ${isHighlighted ? 'highlighted' : ''}">
+                        <span class="line-number">${line.num}</span>
+                        <span class="line-content">${line.text || '&nbsp;'}</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('modalContext').innerHTML = contextHtml;
+            document.getElementById('contextModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('contextModal').classList.remove('active');
+        }
+
+        // Close modal on overlay click
+        document.getElementById('contextModal').addEventListener('click', (e) => {
+            if (e.target.id === 'contextModal') {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Render quotes
+        function renderQuotes() {
+            const container = document.getElementById('quotesContainer');
+            const dimensionFilter = document.getElementById('filterDimension').value;
+            const sourceFilter = document.getElementById('filterSource').value;
+            const searchTerm = document.getElementById('searchQuotes').value.toLowerCase();
+
+            const filtered = quotes.filter((q, i) => {
+                if (dimensionFilter && q.dimension !== dimensionFilter) return false;
+                if (sourceFilter && q.source !== sourceFilter) return false;
+                if (searchTerm && !q.text.toLowerCase().includes(searchTerm) && !q.source.toLowerCase().includes(searchTerm)) return false;
+                return true;
+            });
+
+            container.innerHTML = filtered.map((q, filteredIndex) => {
+                const originalIndex = quotes.indexOf(q);
+                return `
+                <div class="quote-card" data-dimension="${q.dimension}">
+                    <div class="quote-text">"${q.text}"</div>
+                    <div class="quote-meta">
+                        <div>
+                            <span class="quote-source">— ${q.source} (${q.sourceLabel})</span>
+                            <span class="source-ref">${q.file}:${q.line}</span>
+                        </div>
+                        <div class="quote-tags">
+                            <span class="tag tag-dimension">Dim ${q.dimension}</span>
+                            ${q.tags.map(t => `<span class="tag ${t.includes('Critical') ? 'tag-challenge' : t.includes('Progress') ? 'tag-progress' : 'tag-group'}">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="quote-actions">
+                        <button class="context-btn" onclick="showContext(${originalIndex})">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                            View Context
+                        </button>
+                        <button class="copy-btn" onclick="copyQuote(this, \`${q.text.replace(/`/g, "'").replace(/"/g, '\\"')}\`)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: var(--gray); padding: 2rem;">No quotes match the current filters.</p>';
+            }
+        }
+
+        function copyQuote(btn, text) {
+            navigator.clipboard.writeText(`"${text}"`);
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"></polyline>
+                </svg>
+                Copied!
+            `;
+            setTimeout(() => {
+                btn.innerHTML = `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                `;
+            }, 2000);
+        }
+
+        // Filter event listeners
+        document.getElementById('filterDimension').addEventListener('change', renderQuotes);
+        document.getElementById('filterSource').addEventListener('change', renderQuotes);
+        document.getElementById('searchQuotes').addEventListener('input', renderQuotes);
+
+        // Initial render
+        renderQuotes();
+    </script>
+</body>
+</html>
